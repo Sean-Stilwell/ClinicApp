@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8F001A"
+    tools:context=".CreateAccount">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/textCreerCompte1"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:ellipsize="none"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:isScrollContainer="false"
+            android:maxLines="100"
+            android:scrollHorizontally="false"
+            android:singleLine="false"
+            android:text="Créer un compte"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textCreerCompte2"
+                android:layout_width="187dp"
+                android:layout_height="match_parent"
+                android:ellipsize="none"
+                android:ems="10"
+                android:gravity="center|left"
+                android:inputType="textPersonName"
+                android:isScrollContainer="false"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:text="Type de Compte:"
+                android:textColor="#FFFFFF" />
+
+            <RadioGroup
+                android:layout_width="198dp"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioButton2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patient"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="18sp"
+                    tools:visibility="visible" />
+
+                <RadioButton
+                    android:id="@+id/radioButton3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Employé"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textSize="18sp" />
+            </RadioGroup>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textCreerCompte"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="false"
+                android:ellipsize="none"
+                android:ems="10"
+                android:gravity="center|left"
+                android:inputType="textPersonName"
+                android:isScrollContainer="false"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:text="Prénom:"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/textUserInput"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="true"
+                android:ellipsize="none"
+                android:ems="10"
+                android:gravity="center|left"
+                android:inputType="textPersonName"
+                android:isScrollContainer="false"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
+                tools:text="Prénom" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textCreerCompte4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="false"
+                android:ellipsize="none"
+                android:ems="10"
+                android:gravity="center|left"
+                android:inputType="textPersonName"
+                android:isScrollContainer="false"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:text="Nom de famille:"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/textUserInput2"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="true"
+                android:ellipsize="none"
+                android:ems="10"
+                android:gravity="center|left"
+                android:inputType="textPersonName"
+                android:isScrollContainer="false"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
+                tools:text="Nom de famille" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textCreerCompte5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="false"
+                android:ellipsize="none"
+                android:ems="10"
+                android:gravity="center|left"
+                android:inputType="textPersonName"
+                android:isScrollContainer="false"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:text="Courriel:"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/textUserInput3"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="true"
+                android:ellipsize="none"
+                android:ems="10"
+                android:gravity="center|left"
+                android:inputType="textPersonName"
+                android:isScrollContainer="false"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
+                tools:text="Courriel" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/textCreerCompte6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="false"
+                android:ellipsize="none"
+                android:ems="10"
+                android:gravity="center|left"
+                android:inputType="textPersonName"
+                android:isScrollContainer="false"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:singleLine="false"
+                android:text="Mot de passe:"
+                android:textColor="#FFFFFF" />
+
+            <EditText
+                android:id="@+id/textUserInput4"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="true"
+                android:ellipsize="none"
+                android:ems="10"
+                android:gravity="center|left"
+                android:inputType="textPersonName"
+                android:isScrollContainer="false"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
+                tools:text="Mot de passe" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="232dp"
+            android:layout_height="match_parent"
+            android:text="S'inscrire" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
