@@ -4,15 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#8F001A"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="322dp"
+            android:layout_height="390dp"
+            android:layout_gravity="center|center_vertical"
+            app:srcCompat="@drawable/logo" />
+
+        <EditText
+            android:id="@+id/textWelcome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:isScrollContainer="false"
+            android:maxLines="100"
+            android:scrollHorizontally="false"
+            android:singleLine="false"
+            android:text="Bienvenue au clinique de l'université d'Ottawa. "
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/textWelcome2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:isScrollContainer="false"
+            android:maxLines="100"
+            android:scrollHorizontally="false"
+            android:singleLine="false"
+            android:text="Veuillez créer un nouveau compte, ou se connecter"
+            android:textColor="#FFFFFF" />
+
+        <EditText
+            android:id="@+id/textWelcome3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="none"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="textPersonName"
+            android:isScrollContainer="false"
+            android:maxLines="100"
+            android:scrollHorizontally="false"
+            android:singleLine="false"
+            android:text="à un compte existant pour accèder ce service"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/createAccountButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Inscription" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Se connecter" />
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
