@@ -20,4 +20,9 @@ public class MainActivity extends AppCompatActivity {
     public void openCreationPage(View view) {
         startActivity(new Intent(MainActivity.this, CreateAccount.class));
     }
+
+    /** Called when the user clicks the Send button */
+    public void openLoginPage(View view) {
+        startActivity(new Intent(MainActivity.this, LogInScreen.class));
+    }
 }
