@@ -1,5 +1,6 @@
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 public class Message implements Serializable {
 
@@ -11,43 +12,69 @@ public class Message implements Serializable {
 	// EXEMPLE : SIGNING UP A PATIENT REQUIRES 4 ARGUMENTS IN THIS ORDER : FIRST NAME, LAST NAME, EMAIL, PASSWORD
 	// This message would be send by the client (user side) to the server. 
 
-	private String messageType;
-	private String firstArgument;
-	private String secondArgument;
-	private String thirdArgument;
 
+	/**
+    * Variable representing the Message Type.
+    */
+
+	private String messageType;
+	/**
+    * To add more generality, arguments could be anything (String, Account, Patient).
+    * There could be any number of arguments.
+    */
+
+	private ArrayList<Object> arguments;
 
 	public Message(String messageType){
 		this.messageType = messageType;
+		this.arguments = new ArrayList<Object>();
 	}
 
-	public void setFirstArgument(String argument){
-		this.firstArgument = argument;
+	/**
+    * Adds the specified argument to the end of the list of arguments.
+    */
+
+	public void addArgument(Object argument){
+		arguments.add(argument);
 	}
 
-	public void setSecondArgument(String argument){
-		this.secondArgument = argument;
+	/**
+    * Adds the specified argument at the specified postion.
+    * Position 0 is the first argument.
+    */
+
+	public void addArgument(int index, Object argument){
+		arguments.add(index, argument);
 	}
 
-	public void setThirdArgument(String argument){
-		this.thirdArgument = argument;
-	}
+	/**
+    * Returns the type of the message.
+    * @return String representing the type of message.
+    */
 
 	public String getMessageType(){
 		return this.messageType;
 	}
 
-	public String getFirstArgument(){
-		return this.firstArgument;
+	/**
+    * Returns the argument at the specified index.
+    * @return Object representing argument.
+    */
+
+	public Object getArgument(int index){
+		return (arguments.get(index));
 	}
 
-	public String getSecondArgument(){
-		return this.secondArgument;
-	}
+	/**
+    * Returns the number of arguments in this message.
+    * @return Object representing argument.
+    */
 
-	public String getThirdArgument(){
-		return this.thirdArgument;
+	public int getNumOfArgs(){
+		return arguments.size();
 	}
 
 }
+
+
 
