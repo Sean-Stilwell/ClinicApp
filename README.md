@@ -4,7 +4,7 @@ Dimanche, le 20 octobre, 2019
 Ce répertoire contient nos fichiers pour le livrable 1 du projet final de SEG2505 en automne, 2019.
 
 ## Équipe
-* Mohamed Reda Ben Taleb -
+* Mohamed Reda Ben Taleb - 300043376
 * Matthieu Frenette - 8172416
 * Alexandru Sauer - 300026641
 * Sean Stilwell - 300053246
