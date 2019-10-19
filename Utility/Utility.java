@@ -19,7 +19,13 @@ public class Utility {
 
 	public static String SHA256(String argument){
 
+		if(argument==null){
+
+			throw NullPointerException("No argument given.");
+		}
+
 		String toReturn = null;
+
 		try {
 
 		    byte[] data = argument.getBytes(StandardCharsets.UTF_8);
@@ -30,10 +36,32 @@ public class Utility {
 
 		} catch (NoSuchAlgorithmException e){
 
-			// WILL NEVER HAPPEN, BUT STILL HAVE TO CATCH
+			// WILL NEVER HAPPEN IN PRACTICE, BUT STILL HAVE TO CATCH
 			// THE ALGORITHM WILL RETURN NULL IF THIS EXCEPTION IS THROWN			
 		}
 		return toReturn;
 	}
+
+
+	public static boolean isValidEmail(String email){
+
+		throw new NullPointerException("NOT IMPLEMENTED.") // TODO : IMPLEMENT
+
+	}
+
+	public static boolean isValidName(String name){
+
+		throw new NullPointerException("NOT IMPLEMENTED.") // TODO : IMPLEMENT
+
+	}
+
 }
+
+
+
+
+
+
+
+
 
