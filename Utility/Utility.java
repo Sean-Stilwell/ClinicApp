@@ -1,4 +1,4 @@
-package Utility;
+package com.example.projetfinaleseg2505;
 
 import java.security.MessageDigest;
 import java.nio.charset.StandardCharsets;

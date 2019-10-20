@@ -1,3 +1,5 @@
+package com.example.projetfinaleseg2505;
+
 import java.lang.NullPointerException;
 
 public class Account {
