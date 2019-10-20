@@ -1,7 +1,7 @@
 package com.example.projetfinaleseg2505;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.widget.EditText;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +21,8 @@ public class LogInScreen extends AppCompatActivity {
             startActivity(new Intent(LogInScreen.this, WelcomeScreen.class));
         //}
         //else {
-        // display an error for the incorrect username or password.
+            //EditText text = (EditText)findViewById(R.id.textLogin3);
+            //text.setVisibility(View.VISIBLE);
         //}
     }
 }
