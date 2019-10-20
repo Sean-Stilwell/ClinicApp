@@ -3,6 +3,8 @@ import java.security.MessageDigest;
 import java.nio.charset.StandardCharsets;
 import javax.xml.bind.DatatypeConverter;
 import java.security.NoSuchAlgorithmException;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
 public class Utility {
 
@@ -12,6 +14,7 @@ public class Utility {
     * This method applies the SHA256 cryptographic on the String argument.
     * The resulted hash is then converted into Hexadcimal String format.
     * The original String is not modified.
+    * This method throws an exception if the argument is null.
     *
     * @param argument the String to be hashed
     * @return Hexadciamal String representation of the resulted Hash.
@@ -21,7 +24,7 @@ public class Utility {
 
 		if(argument==null){
 
-			throw NullPointerException("No argument given.");
+			throw new NullPointerException("No argument given.");
 		}
 
 		String toReturn = null;
@@ -42,17 +45,34 @@ public class Utility {
 		return toReturn;
 	}
 
+    /**
+    * This method validates if the String given as argument is a valid email.
+    * This method throws an exception if the argument is null.
+    *
+    * @param email String to be validated.
+    * @return True if email is valid and false if not.
+    */
 
 	public static boolean isValidEmail(String email){
 
-		throw new NullPointerException("NOT IMPLEMENTED.") // TODO : IMPLEMENT
-
+		if(email==null){
+			throw new NullPointerException();
+		}
+		String regex = "^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$"; // Specific pattern
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(email);
+		return matcher.matches(); // Tries to match email to pattern
 	}
 
 	public static boolean isValidName(String name){
 
-		throw new NullPointerException("NOT IMPLEMENTED.") // TODO : IMPLEMENT
-
+		if(name==null){
+			throw new NullPointerException();
+		}
+		String regex = "[A-Z][a-z]*"; // Specific pattern
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(name);
+		return matcher.matches(); // Tries to match name to pattern
 	}
 
 }
