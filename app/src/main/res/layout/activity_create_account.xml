@@ -308,6 +308,7 @@
             android:id="@+id/button"
             android:layout_width="232dp"
             android:layout_height="match_parent"
+            android:onClick="inscrireClick"
             android:text="S'inscrire" />
 
     </LinearLayout>

@@ -16,12 +16,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /** Called when the user clicks the Send button */
+    /** Called when the user clicks the S'Inscrire button */
     public void openCreationPage(View view) {
         startActivity(new Intent(MainActivity.this, CreateAccount.class));
     }
 
-    /** Called when the user clicks the Send button */
+    /** Called when the user clicks the Se Connecter button */
     public void openLoginPage(View view) {
         startActivity(new Intent(MainActivity.this, LogInScreen.class));
     }
