@@ -32,7 +32,7 @@ public class Utility {
 
 		try {
 
-		    byte[] data = argument.getBytes(StandardCharsets.UTF_8);
+		    byte[] data = argument.getBytes(StandardCharsets.UTF_8); // Convert argument into array of bytes.
 		    MessageDigest messageDigest = MessageDigest.getInstance(SHA256);
 		    byte[] hash = messageDigest.digest(data);
 		    String hexRepresentation = DatatypeConverter.printHexBinary(hash);
@@ -57,7 +57,7 @@ public class Utility {
 	public static boolean isValidEmail(String email){
 
 		if(email==null){
-			throw new NullPointerException();
+			throw new NullPointerException(); // Argument is null
 		}
 		String regex = "^[\\w!#$%&’*+/=?`{|}~^-]+(?:\\.[\\w!#$%&’*+/=?`{|}~^-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,6}$"; // Specific pattern
 		Pattern pattern = Pattern.compile(regex);
@@ -65,24 +65,23 @@ public class Utility {
 		return matcher.matches(); // Tries to match email to pattern
 	}
 
+
+    /**
+    * This method validates if the name (either first or last name) is valid.
+    * This method throws an exception if the argument is null.
+    * In this case, we only consider valid names that contain
+    * letters only. The first letter must be uppercase.
+    *
+    * @param name String to be validated.
+    * @return True if the name is valid, false if not.
+    */
+
 	public static boolean isValidName(String name){
 
 		if(name==null){
-			throw new NullPointerException();
+			throw new NullPointerException(); // Argument is null
 		}
-		String regex = "[A-Z][a-z]*"; // Specific pattern
-		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(name);
-		return matcher.matches(); // Tries to match name to pattern
+		return name.matches("[A-Z][a-z]*"); // Tries to match name to the specific pattern.
 	}
-
 }
-
-
-
-
-
-
-
-
 
