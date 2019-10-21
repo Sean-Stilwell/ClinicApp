@@ -12,7 +12,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String LOGIN = "LOGIN";
     public static final String PASSWORD = "PASSWORD";
     public static final String TYPE = "TYPE";
-    public static final String NAME = "NAME";
+    public static final String FIRST_NAME = "FIRST_NAME";
+    public static final String LAST_NAME = "LAST_NAME";
 
 
     public DatabaseHelper(Context context) {
@@ -22,7 +23,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("create table "+ TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, LOGIN TEXT, PASSWORD TEXT, TYPE TEXT, NAME TEXT )");
+        db.execSQL("create table "+ TABLE_NAME + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, LOGIN TEXT, PASSWORD TEXT, TYPE TEXT, FIRST_NAME TEXT, LAST_NAME TEXT )");
 
     }
 
@@ -31,13 +32,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
-    public boolean insertData(String id, String password, String type, String name){
+    public boolean insertData(String id, String password, String type, String firstName, String lastName){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put(ID,id);
         contentValues.put(PASSWORD,password);
         contentValues.put(TYPE,type);
-        contentValues.put(NAME, name);
+        contentValues.put(FIRST_NAME, firstName);
+        contentValues.put(LAST_NAME, lastName);
         long result = db.insert(TABLE_NAME,null,contentValues);
         if(result==-1)
             return false;

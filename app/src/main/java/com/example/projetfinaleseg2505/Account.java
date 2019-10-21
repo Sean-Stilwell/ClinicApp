@@ -8,6 +8,14 @@ public class Account {
   protected String username, lastName, firstName, password, email, type;
 
   /**
+   * This method returns the type of account.
+   * @return The type of the account.
+   */
+  protected String getType(){
+    return this.type;
+  }
+
+  /**
   * This method returns the username of that account.
   * @return The username of the account
   */
@@ -71,6 +79,6 @@ public class Account {
   protected void addAccountToDatabase(){
     String fullName = this.firstName + this.lastName;
     DatabaseHelper dh = new DatabaseHelper(null); // Needs to be changed - only null to compile
-    dh.insertData(this.getUsername(), this.password, this.type, fullName);
+    dh.insertData(this.getUsername(), this.password, this.type, this.firstName, this.lastName);
   }
 }
