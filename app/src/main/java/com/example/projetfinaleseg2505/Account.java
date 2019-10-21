@@ -7,6 +7,14 @@ public class Account {
   protected String username, lastName, firstName, password, email, type;
 
   /**
+   * This method returns the type of account.
+   * @return The type of the account.
+   */
+  protected String getType(){
+    return this.type;
+  }
+
+  /**
   * This method returns the username of that account.
   * @return The username of the account
   */
@@ -68,7 +76,7 @@ public class Account {
   * The method is called at the creation of a new account.
   */
   protected void addAccountToDatabase(){
-    String fullName = this.firstName + this.lastName;
-    DatabaseHelper.insertData(this.getUsername(), this.password, this.type, fullName);
+    //String fullName = this.firstName + this.lastName;
+    insertData(this.getUsername(), this.getPassword(), this.getType(), this.getFirstName(), this.getLastName());
   }
 }
