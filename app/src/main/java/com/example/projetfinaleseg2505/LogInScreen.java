@@ -17,8 +17,11 @@ public class LogInScreen extends AppCompatActivity {
 
     /** Called when the user clicks the Send button */
     public void connecterClick(View view) {
-        // boolean variable for validating the username / password
-        if (true) { // add the variable here.
+        // Needs to be changed when database is implemented
+        boolean validName = true;
+        boolean validPassword = true;
+
+        if (validName && validPassword) {
             startActivity(new Intent(LogInScreen.this, WelcomeScreen.class));
         }
         else {
