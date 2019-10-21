@@ -78,7 +78,7 @@ public class Account {
   */
   protected void addAccountToDatabase(){
     String fullName = this.firstName + this.lastName;
-    DatabaseHelper dh = new DatabaseHelper(null); // Needs to be changed - only null to compile
+    DatabaseHelper dh = new DatabaseHelper(this); // Needs to be changed - only null to compile
     dh.insertData(this.getUsername(), this.password, this.type, this.firstName, this.lastName);
   }
 }
