@@ -1,7 +1,7 @@
 package com.example.projetfinaleseg2505;
 
 import androidx.appcompat.app.AppCompatActivity;
-import android.widget.EditText;
+import android.widget.*;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -37,7 +37,7 @@ public class CreateAccount extends AppCompatActivity {
             startActivity(new Intent(CreateAccount.this, LogInScreen.class));
         }
         else {
-            EditText text = (EditText)findViewById(R.id.textError);
+            TextView text = (TextView)findViewById(R.id.textError);
             text.setVisibility(View.VISIBLE);
         }
     }

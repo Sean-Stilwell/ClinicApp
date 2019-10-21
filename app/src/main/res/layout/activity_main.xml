@@ -14,56 +14,42 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="366dp"
-            android:layout_height="419dp"
+            android:layout_width="383dp"
+            android:layout_height="381dp"
             android:layout_gravity="center|center_vertical"
             app:srcCompat="@drawable/logo" />
 
         <TextView
-            android:id="@+id/textWelcome"
+            android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Bienvenue au clinique de l'université d'Ottawa. "
+            android:lineSpacingExtra="8sp"
+            android:text="Bienvenue au clinique de l'université d'Ottawa.  Pour accèder ce service, veuillez vous connecter à un compte existant, our créer un nouveau compte."
             android:textColor="#FFFFFF"
             android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/textWelcome4"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="Veuillez créer un nouveau compte, ou se connecter"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textWelcome5"
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_weight="1"
-            android:gravity="center"
-            android:text="à un compte existant pour accèder ce service"
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            <Button
+                android:id="@+id/createAccountButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="openCreationPage"
+                android:text="Inscription" />
 
-        <Button
-            android:id="@+id/createAccountButton"
-            android:layout_width="match_parent"
-            android:layout_height="16dp"
-            android:layout_weight="1"
-            android:onClick="openCreationPage"
-            android:text="Inscription" />
-
-        <Button
-            android:id="@+id/loginButton"
-            android:layout_width="match_parent"
-            android:layout_height="16dp"
-            android:layout_weight="1"
-            android:onClick="openLoginPage"
-            android:text="Se connecter" />
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="openLoginPage"
+                android:text="Se connecter" />
+        </LinearLayout>
 
     </LinearLayout>
 

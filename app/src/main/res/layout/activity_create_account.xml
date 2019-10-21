@@ -267,6 +267,7 @@
             android:text="ERREUR: Prenom, Nom ou Courriel invalide."
             android:textColor="#FFFFFF"
             android:textSize="18sp"
+            android:visibility="invisible"
             tools:visibility="invisible" />
 
     </LinearLayout>

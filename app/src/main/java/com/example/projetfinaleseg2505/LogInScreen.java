@@ -5,6 +5,7 @@ import android.widget.EditText;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 public class LogInScreen extends AppCompatActivity {
 
@@ -17,12 +18,12 @@ public class LogInScreen extends AppCompatActivity {
     /** Called when the user clicks the Send button */
     public void connecterClick(View view) {
         // boolean variable for validating the username / password
-        //if variable is true {
+        if (true) { // add the variable here.
             startActivity(new Intent(LogInScreen.this, WelcomeScreen.class));
-        //}
-        //else {
-            //EditText text = (EditText)findViewById(R.id.textLogin3);
-            //text.setVisibility(View.VISIBLE);
-        //}
+        }
+        else {
+            TextView text = (TextView)findViewById(R.id.textLogin3);
+            text.setVisibility(View.VISIBLE);
+        }
     }
 }
