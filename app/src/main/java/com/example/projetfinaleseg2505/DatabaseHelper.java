@@ -6,13 +6,13 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME= "Account.db";
-    public static final String TABLE_NAME = "Account_table";
-    public static final String ID = "ID";
-    public static final String LOGIN = "LOGIN";
-    public static final String PASSWORD = "PASSWORD";
-    public static final String TYPE = "TYPE";
-    public static final String NAME = "NAME";
+    public final String DATABASE_NAME= "Account.db";
+    public final String TABLE_NAME = "Account_table";
+    public final String ID = "ID";
+    public final String LOGIN = "LOGIN";
+    public final String PASSWORD = "PASSWORD";
+    public final String TYPE = "TYPE";
+    public final String NAME = "NAME";
 
 
     public DatabaseHelper(Context context) {
