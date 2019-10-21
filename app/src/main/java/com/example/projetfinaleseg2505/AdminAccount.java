@@ -1,4 +1,4 @@
-
+package com.example.projetfinaleseg2505;
 
 public class AdminAccount extends Account {
 

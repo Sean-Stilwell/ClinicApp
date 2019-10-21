@@ -1,4 +1,4 @@
-
+package com.example.projetfinaleseg2505;
 public class PatientAccount extends Account{
 
   private final String TYPE_OF_ACCOUNT = "patient";
