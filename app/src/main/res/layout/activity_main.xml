@@ -14,77 +14,57 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="322dp"
-            android:layout_height="390dp"
+            android:layout_width="366dp"
+            android:layout_height="419dp"
             android:layout_gravity="center|center_vertical"
             app:srcCompat="@drawable/logo" />
 
-        <EditText
+        <TextView
             android:id="@+id/textWelcome"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="none"
-            android:ems="10"
+            android:layout_height="5dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:inputType="textPersonName"
-            android:isScrollContainer="false"
-            android:maxLines="100"
-            android:scrollHorizontally="false"
-            android:singleLine="false"
             android:text="Bienvenue au clinique de l'université d'Ottawa. "
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/textWelcome2"
+        <TextView
+            android:id="@+id/textWelcome4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="none"
-            android:ems="10"
+            android:layout_height="5dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:inputType="textPersonName"
-            android:isScrollContainer="false"
-            android:maxLines="100"
-            android:scrollHorizontally="false"
-            android:singleLine="false"
             android:text="Veuillez créer un nouveau compte, ou se connecter"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/textWelcome3"
+        <TextView
+            android:id="@+id/textWelcome5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="none"
-            android:ems="10"
+            android:layout_height="5dp"
+            android:layout_weight="1"
             android:gravity="center"
-            android:inputType="textPersonName"
-            android:isScrollContainer="false"
-            android:maxLines="100"
-            android:scrollHorizontally="false"
-            android:singleLine="false"
             android:text="à un compte existant pour accèder ce service"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
-        <LinearLayout
+        <Button
+            android:id="@+id/createAccountButton"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:onClick="openCreationPage"
+            android:text="Inscription" />
 
-            <Button
-                android:id="@+id/createAccountButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="openCreationPage"
-                android:text="Inscription" />
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_weight="1"
+            android:onClick="openLoginPage"
+            android:text="Se connecter" />
 
-            <Button
-                android:id="@+id/loginButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="openLoginPage"
-                android:text="Se connecter" />
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

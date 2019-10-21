@@ -20,57 +20,39 @@
             android:layout_gravity="center|center_vertical"
             app:srcCompat="@drawable/logo" />
 
-        <EditText
+        <TextView
             android:id="@+id/textCreerCompte1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ellipsize="none"
-            android:ems="10"
             android:gravity="center"
-            android:inputType="textPersonName"
-            android:isScrollContainer="false"
-            android:maxLines="100"
-            android:scrollHorizontally="false"
-            android:singleLine="false"
             android:text="Créer un compte"
             android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            android:textStyle="bold" />
+            android:textSize="24sp" />
 
-        <EditText
+        <TextView
             android:id="@+id/textWelcome6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ellipsize="none"
-            android:ems="10"
+            android:layout_weight="1"
             android:gravity="center"
-            android:inputType="textPersonName"
-            android:isScrollContainer="false"
-            android:maxLines="100"
-            android:scrollHorizontally="false"
-            android:singleLine="false"
             android:text="Remplir les informations suivantes pour t'inscrire."
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/textCreerCompte2"
-                android:layout_width="187dp"
+            <TextView
+                android:id="@+id/textCreerCompte"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:ellipsize="none"
-                android:ems="10"
-                android:gravity="center|left"
-                android:inputType="textPersonName"
-                android:isScrollContainer="false"
-                android:maxLines="100"
-                android:scrollHorizontally="false"
-                android:singleLine="false"
-                android:text="Type de Compte:"
-                android:textColor="#FFFFFF" />
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Type de compte:"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <RadioGroup
                 android:layout_width="198dp"
@@ -103,22 +85,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/textCreerCompte"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textCreerCompte2"
+                android:layout_width="318dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:editable="false"
-                android:ellipsize="none"
-                android:ems="10"
-                android:gravity="center|left"
-                android:inputType="textPersonName"
-                android:isScrollContainer="false"
-                android:maxLines="100"
-                android:scrollHorizontally="false"
-                android:singleLine="false"
+                android:gravity="center_vertical"
                 android:text="Prénom:"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/textUserInput"
@@ -145,22 +120,15 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/textCreerCompte4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textCreerCompte3"
+                android:layout_width="318dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:editable="false"
-                android:ellipsize="none"
-                android:ems="10"
-                android:gravity="center|left"
-                android:inputType="textPersonName"
-                android:isScrollContainer="false"
-                android:maxLines="100"
-                android:scrollHorizontally="false"
-                android:singleLine="false"
+                android:gravity="center_vertical"
                 android:text="Nom de famille:"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/textUserInput2"
@@ -186,22 +154,15 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/textCreerCompte7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <TextView
+                android:id="@+id/textCreerCompte4"
+                android:layout_width="318dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:editable="false"
-                android:ellipsize="none"
-                android:ems="10"
-                android:gravity="center|left"
-                android:inputType="textPersonName"
-                android:isScrollContainer="false"
-                android:maxLines="100"
-                android:scrollHorizontally="false"
-                android:singleLine="false"
+                android:gravity="center_vertical"
                 android:text="Nom d'utilisateur:"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/textUserInput5"
@@ -223,67 +184,19 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/textCreerCompte5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:editable="false"
-                android:ellipsize="none"
-                android:ems="10"
-                android:gravity="center|left"
-                android:inputType="textPersonName"
-                android:isScrollContainer="false"
-                android:maxLines="100"
-                android:scrollHorizontally="false"
-                android:singleLine="false"
-                android:text="Courriel:"
-                android:textColor="#FFFFFF" />
-
-            <EditText
-                android:id="@+id/textUserInput3"
-                android:layout_width="307dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:editable="true"
-                android:ellipsize="none"
-                android:ems="10"
-                android:gravity="center|left"
-                android:inputType="textPersonName"
-                android:isScrollContainer="false"
-                android:maxLines="100"
-                android:scrollHorizontally="false"
-                android:singleLine="true"
-                android:textColor="#FFFFFF"
-                android:textStyle="italic"
-                tools:text="Courriel" />
-        </LinearLayout>
-
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal">
 
-            <EditText
+            <TextView
                 android:id="@+id/textCreerCompte6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="318dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:editable="false"
-                android:ellipsize="none"
-                android:ems="10"
-                android:gravity="center|left"
-                android:inputType="textPersonName"
-                android:isScrollContainer="false"
-                android:maxLines="100"
-                android:scrollHorizontally="false"
-                android:singleLine="false"
+                android:gravity="center_vertical"
                 android:text="Mot de passe:"
-                android:textColor="#FFFFFF" />
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/textUserInput4"
@@ -304,6 +217,40 @@
                 tools:text="Mot de passe" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textCreerCompte5"
+                android:layout_width="119dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:text="Courriel:"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/textUserInput3"
+                android:layout_width="307dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:editable="true"
+                android:ellipsize="none"
+                android:ems="10"
+                android:gravity="center|left"
+                android:inputType="textPersonName"
+                android:isScrollContainer="false"
+                android:maxLines="100"
+                android:scrollHorizontally="false"
+                android:singleLine="true"
+                android:textColor="#FFFFFF"
+                android:textStyle="italic"
+                tools:text="Courriel" />
+        </LinearLayout>
+
         <Button
             android:id="@+id/button"
             android:layout_width="232dp"
@@ -311,23 +258,16 @@
             android:onClick="inscrireClick"
             android:text="S'inscrire" />
 
-        <EditText
+        <TextView
             android:id="@+id/textError"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
-            android:editable="false"
-            android:ellipsize="none"
-            android:ems="10"
-            android:gravity="center|top"
-            android:inputType="textPersonName"
-            android:isScrollContainer="false"
-            android:maxLines="100"
-            android:scrollHorizontally="false"
-            android:singleLine="false"
+            android:gravity="center_vertical"
             android:text="ERREUR: Prenom, Nom ou Courriel invalide."
             android:textColor="#FFFFFF"
-            android:visibility="invisible" />
+            android:textSize="18sp"
+            tools:visibility="invisible" />
 
     </LinearLayout>
 
