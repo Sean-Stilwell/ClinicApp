@@ -26,6 +26,12 @@ public class CreateAccount extends AppCompatActivity {
         EditText emailText = (EditText)findViewById(R.id.textUserInput3);
         String email = emailText.getText().toString();
 
+        EditText passwordText = (EditText)findViewById(R.id.textUserInput5);
+        String password = passwordText.getText().toString();
+
+        EditText usernameText = (EditText)findViewById(R.id.textUserInput5);
+        String username = usernameText.getText().toString();
+
         // Validating the user data
         boolean validEmail = Utility.isValidEmail(email);
         boolean validSurname = Utility.isValidName(surname);
@@ -33,7 +39,16 @@ public class CreateAccount extends AppCompatActivity {
 
         // Proceeding with the user data in consideration.
         if (validEmail && validSurname && validPrenom) {
-            // add data to the database
+            RadioButton button1 = (RadioButton)findViewById(R.id.radioButton2); // Patient
+            RadioButton button2 = (RadioButton)findViewById(R.id.radioButton3); // Employee
+            if (button1.isChecked()){
+                PatientAccount newCompte = new PatientAccount(username, surname, prenom, password, email);
+                newCompte.addAccountToDatabase();
+            }
+            else if (button2.isChecked()){
+                EmployeeAccount newCompte = new EmployeeAccount(username, surname, prenom, password, email);
+                newCompte.addAccountToDatabase();
+            }
             startActivity(new Intent(CreateAccount.this, LogInScreen.class));
         }
         else {

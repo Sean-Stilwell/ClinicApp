@@ -1,6 +1,7 @@
 package com.example.projetfinaleseg2505;
 
 import java.lang.NullPointerException;
+import android.content.Context;
 
 public class Account {
 
@@ -69,6 +70,7 @@ public class Account {
   */
   protected void addAccountToDatabase(){
     String fullName = this.firstName + this.lastName;
-    DatabaseHelper.insertData(this.getUsername(), this.password, this.type, fullName);
+    DatabaseHelper dh = new DatabaseHelper(null); // Needs to be changed - only null to compile
+    dh.insertData(this.getUsername(), this.password, this.type, fullName);
   }
 }
