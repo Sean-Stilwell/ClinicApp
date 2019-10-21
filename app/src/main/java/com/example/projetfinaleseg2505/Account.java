@@ -69,6 +69,6 @@ public class Account {
   */
   protected void addAccountToDatabase(){
     String fullName = this.firstName + this.lastName;
-    DatabaseHelper.insertData(this.username, this.password, this.type, fullName);
+    DatabaseHelper.insertData(this.getUsername(), this.password, this.type, fullName);
   }
 }
