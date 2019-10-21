@@ -14,59 +14,24 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="322dp"
-            android:layout_height="390dp"
+            android:layout_width="383dp"
+            android:layout_height="381dp"
             android:layout_gravity="center|center_vertical"
             app:srcCompat="@drawable/logo" />
 
-        <EditText
-            android:id="@+id/textWelcome"
+        <TextView
+            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ellipsize="none"
-            android:ems="10"
             android:gravity="center"
-            android:inputType="textPersonName"
-            android:isScrollContainer="false"
-            android:maxLines="100"
-            android:scrollHorizontally="false"
-            android:singleLine="false"
-            android:text="Bienvenue au clinique de l'université d'Ottawa. "
-            android:textColor="#FFFFFF" />
-
-        <EditText
-            android:id="@+id/textWelcome2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="none"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="textPersonName"
-            android:isScrollContainer="false"
-            android:maxLines="100"
-            android:scrollHorizontally="false"
-            android:singleLine="false"
-            android:text="Veuillez créer un nouveau compte, ou se connecter"
-            android:textColor="#FFFFFF" />
-
-        <EditText
-            android:id="@+id/textWelcome3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ellipsize="none"
-            android:ems="10"
-            android:gravity="center"
-            android:inputType="textPersonName"
-            android:isScrollContainer="false"
-            android:maxLines="100"
-            android:scrollHorizontally="false"
-            android:singleLine="false"
-            android:text="à un compte existant pour accèder ce service"
-            android:textColor="#FFFFFF" />
+            android:lineSpacingExtra="8sp"
+            android:text="Bienvenue au clinique de l'université d'Ottawa.  Pour accèder ce service, veuillez vous connecter à un compte existant, our créer un nouveau compte."
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -85,6 +50,7 @@
                 android:onClick="openLoginPage"
                 android:text="Se connecter" />
         </LinearLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
