@@ -40,7 +40,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put(TYPE,type);
         contentValues.put(FIRST_NAME, firstName);
         contentValues.put(LAST_NAME, lastName);
-        long result = db.insert(TABLE_NAME,null,contentValues);
+        long result = db.insert(TABLE_NAME, null, contentValues);
         if(result==-1)
             return false;
         else
