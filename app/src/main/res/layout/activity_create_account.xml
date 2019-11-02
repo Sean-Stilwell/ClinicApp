@@ -65,6 +65,7 @@
 
                     <RadioGroup
                         android:layout_width="198dp"
+                        android:checkedButton="@+id/radioButton2"
                         android:layout_height="wrap_content">
 
                         <RadioButton
@@ -105,7 +106,7 @@
                         android:textSize="18sp" />
 
                     <EditText
-                        android:id="@+id/textUserInput"
+                        android:id="@+id/firstNameInput"
                         android:layout_width="307dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -140,7 +141,7 @@
                         android:textSize="18sp" />
 
                     <EditText
-                        android:id="@+id/textUserInput2"
+                        android:id="@+id/lastNameInput"
                         android:layout_width="307dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -161,36 +162,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:id="@+id/textCreerCompte4"
-                        android:layout_width="318dp"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center_vertical"
-                        android:text="Nom d'utilisateur:"
-                        android:textColor="#FFFFFF"
-                        android:textSize="18sp" />
-
-                    <EditText
-                        android:id="@+id/textUserInput5"
-                        android:layout_width="307dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:editable="true"
-                        android:ellipsize="none"
-                        android:ems="10"
-                        android:gravity="center|left"
-                        android:inputType="textPersonName"
-                        android:isScrollContainer="false"
-                        android:maxLines="100"
-                        android:scrollHorizontally="false"
-                        android:singleLine="true"
-                        android:textColor="#FFFFFF"
-                        android:textStyle="italic"
-                        tools:text="Nom d'utilisateur" />
-                </LinearLayout>
+                    android:orientation="horizontal"/>
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -208,7 +180,7 @@
                         android:textSize="18sp" />
 
                     <EditText
-                        android:id="@+id/textUserInput4"
+                        android:id="@+id/passwordInput"
                         android:layout_width="307dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -242,7 +214,7 @@
                         android:textSize="18sp" />
 
                     <EditText
-                        android:id="@+id/textUserInput3"
+                        android:id="@+id/emailInput"
                         android:layout_width="307dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -264,8 +236,8 @@
                     android:id="@+id/button"
                     android:layout_width="232dp"
                     android:layout_height="match_parent"
-                    android:onClick="inscrireClick"
-                    android:text="S'inscrire" />
+                    android:onClick="signUpClick"
+                    android:text="Sign Up" />
 
                 <TextView
                     android:id="@+id/textError"
@@ -273,7 +245,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:gravity="center_vertical"
-                    android:text="ERREUR: Prenom, Nom ou Courriel invalide."
+                    android:text="ERREUR: Prenom, Nom ou Courriel invalide. Password must have at least 6 characters."
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
                     android:visibility="invisible"

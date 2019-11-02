@@ -25,16 +25,16 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/textLogin1"
+                android:id="@+id/idd"
                 android:layout_width="210dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Nom d'utilisateur:"
+                android:text="E-mail:"
                 android:textColor="#FFFFFF"
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/textUserInput7"
+                android:id="@+id/emailTextEdit"
                 android:layout_width="307dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -49,7 +49,7 @@
                 android:singleLine="true"
                 android:textColor="#FFFFFF"
                 android:textStyle="italic"
-                tools:text="Nom d'utilisateur" />
+                tools:text="E-mail" />
         </LinearLayout>
 
         <LinearLayout
@@ -67,7 +67,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/textUserInput8"
+                android:id="@+id/passTextEdit"
                 android:layout_width="307dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -91,8 +91,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:onClick="connecterClick"
-            android:text="Connecter" />
+            android:onClick="loginClick"
+            android:text="Connect" />
 
         <TextView
             android:id="@+id/textLogin3"
