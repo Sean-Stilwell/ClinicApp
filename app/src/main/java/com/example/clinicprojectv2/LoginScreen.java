@@ -48,8 +48,8 @@ public class LoginScreen extends AppCompatActivity {
     /** Called when the user clicks the Connect button */
     public void loginClick(View view) {
 
-        String email = this.retrieveUserEmail();
-        String password = this.retrieveUserPass();
+        String email = this.retrieveUserEmail().trim();
+        String password = this.retrieveUserPass().trim();
 
 
         if(!(this.validUserInput(email,password))){
