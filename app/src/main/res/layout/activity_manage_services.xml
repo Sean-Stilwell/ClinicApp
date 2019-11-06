@@ -20,7 +20,7 @@
             android:backgroundTint="#AD3AD3EC"
             android:clickable="true"
             android:focusable="true"
-            app:srcCompat="?attr/actionModeShareDrawable" />
+            app:srcCompat="@drawable/ic_add_black_24dp" />
     </FrameLayout>
 
     <LinearLayout
