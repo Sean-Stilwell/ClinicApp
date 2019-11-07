@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_accounts"
+        android:icon="@drawable/ic_supervisor_account_black_24dp"
+        android:title="Accounts" />
+
+    <item
+        android:id="@+id/navigation_services"
+        android:icon="@drawable/ic_room_service_black_24dp"
+        android:title="Services" />
+
+</menu>
