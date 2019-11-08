@@ -10,45 +10,57 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:weightSum="2">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="383dp"
-            android:layout_height="381dp"
-            android:layout_gravity="center|center_vertical"
-            app:srcCompat="@drawable/logo" />
-
-        <TextView
-            android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:lineSpacingExtra="8sp"
-            android:text="Bienvenue au clinique de l'université d'Ottawa.  Pour accèder ce service, veuillez vous connecter à un compte existant, our créer un nouveau compte."
-            android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:layout_gravity="center|center_vertical"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/logo" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/createAccountButton"
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="openCreationPage"
-                android:text="Inscription" />
+                android:layout_marginBottom="30dp"
+                android:gravity="center"
+                android:lineSpacingExtra="8sp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="Bienvenue aux cliniques de l'université d'Ottawa.  Pour accèder ce service, veuillez vous connecter à un compte existant, ou créer un nouveau compte."
+                android:textColor="#BFFFFFFF"
+                android:textSize="18sp" />
 
             <Button
                 android:id="@+id/loginButton"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:width="300dp"
+                android:height="60dp"
                 android:onClick="openLoginPage"
                 android:text="Se connecter" />
+
+            <Button
+                android:id="@+id/createAccountButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:width="300dp"
+                android:height="60dp"
+                android:onClick="openCreationPage"
+                android:text="Inscription" />
+
         </LinearLayout>
 
     </LinearLayout>
