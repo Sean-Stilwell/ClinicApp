@@ -1,5 +1,7 @@
 package com.example.clinicprojectv2;
 
+import android.text.TextUtils;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -56,7 +58,7 @@ public class Utility {
 		if(service == null){
 			throw new NullPointerException();
 		}
-		return service.matches("^[a-zA-Z]*$");
+		return (!TextUtils.isEmpty(service))&&(service.matches("^[a-zA-Z]*$"))  ;
 	}
 }
 

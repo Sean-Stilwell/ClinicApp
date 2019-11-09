@@ -9,10 +9,75 @@
         android:id="@+id/performerServiceChoices"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:forceDarkAllowed="false"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-condensed"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+    <EditText
+        android:id="@+id/serviceNameTextField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Service name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-condensed"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:text="Select service performer :"
+        android:textSize="17.5dp"
+        app:layout_constraintStart_toStartOf="@+id/serviceNameTextField"
+        app:layout_constraintTop_toBottomOf="@+id/serviceNameTextField" />
+
+    <Button
+        android:id="@+id/buttonAddService"
+        style="?attr/actionButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:background="#617A022A"
+        android:fontFamily="sans-serif-condensed"
+        android:onClick="onClickAdd"
+        android:shadowColor="#BD0B0B"
+        android:text="Add"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/serviceNameTextField"
+        app:layout_constraintStart_toStartOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/performerServiceChoices" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="Services"
+        app:layout_constraintEnd_toEndOf="@+id/buttonAddService"
+        app:layout_constraintStart_toStartOf="@+id/buttonAddService"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAddService" />
+
+    <ListView
+        android:id="@+id/listViewServices"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.143"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091" />
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

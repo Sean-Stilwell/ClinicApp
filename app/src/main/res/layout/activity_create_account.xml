@@ -233,7 +233,7 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/buttonAddService"
                     android:layout_width="232dp"
                     android:layout_height="match_parent"
                     android:onClick="signUpClick"

@@ -33,7 +33,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ListView
-            android:id="@+id/servicesList"
+            android:id="@+id/listViewServices"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 

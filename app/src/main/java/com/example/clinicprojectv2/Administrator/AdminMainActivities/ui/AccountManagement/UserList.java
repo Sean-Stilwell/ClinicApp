@@ -49,7 +49,4 @@ public class UserList extends ArrayAdapter<Account> {
         return listViewItem;
     }
 
-
-
-
 }

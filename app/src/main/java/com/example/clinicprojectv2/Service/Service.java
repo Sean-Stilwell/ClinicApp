@@ -26,6 +26,20 @@ public class Service {
 
     }
 
+    public String getServicePerformerAsString(){
+
+        switch (this.getServicePerformer()) {
+            case NURSE:
+                return NURSE;
+            case DOCTOR:
+                return DOCTOR;
+            case STAFF:
+                return STAFF;
+            default:
+                throw new IllegalArgumentException();
+        }
+    }
+
     public String getName(){
         return this.name;
     }
