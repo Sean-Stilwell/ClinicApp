@@ -107,7 +107,7 @@
                 android:height="60dp"
                 android:gravity="center"
                 android:onClick="loginClick"
-                android:text="Connect" />
+                android:text="Connexion" />
 
             <TextView
                 android:id="@+id/textLogin3"
