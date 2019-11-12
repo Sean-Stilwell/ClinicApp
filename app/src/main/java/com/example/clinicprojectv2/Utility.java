@@ -60,5 +60,28 @@ public class Utility {
 		}
 		return (!TextUtils.isEmpty(service))&&(service.matches("^[a-zA-Z]*$"))  ;
 	}
+
+	public static boolean isValidPhoneNumber(String phoneNumber){
+		// If the phone number is null, we throw an exception
+		if(phoneNumber == null){
+			throw new NullPointerException();
+		}
+		// If it is written in the format "1111111111", we accept it.
+		if (phoneNumber.matches("\\d{10}")){
+			return true;
+		}
+		// If it uses a - or spaces we also accept it.
+		else if (phoneNumber.matches("\\d{3}[-\\.\\s]\\d{3}[-\\.\\s]\\d{4}")){
+			return true;
+		}
+		// If it uses brackets for the area code we also accept it
+		else if (phoneNumber.matches("\\(\\d{3}\\)-\\d{3}-\\d{4}")){
+			return true;
+		}
+		// otherwise, there is something wrong with their formatting and we return false.
+		else{
+			return false;
+		}
+	}
 }
 
