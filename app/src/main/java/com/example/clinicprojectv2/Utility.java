@@ -83,5 +83,9 @@ public class Utility {
 			return false;
 		}
 	}
+
+	public static boolean isValidAddress(String address){
+		return false;
+	}
 }
 
