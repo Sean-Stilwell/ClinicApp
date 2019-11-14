@@ -85,7 +85,13 @@ public class Utility {
 	}
 
 	public static boolean isValidAddress(String address){
-		return false;
+		// Validating the address value
+		if (address.matches("\\d+\\s+([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)")){
+			return true;
+		}
+		else {
+			return false;
+		}
 	}
 }
 
