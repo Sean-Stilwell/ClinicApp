@@ -1,5 +1,5 @@
-# SEG2505 - Projet Final - Livrable 2
-Dimanche, le 10 novembre, 2019
+# SEG2505 - Projet Final - Livrable 3
+Mercredi, le 20 novembre, 2019
 
 Ce répertoire contient nos fichiers pour le livrable 2 du projet final de SEG2505 en automne, 2019.
 
@@ -12,7 +12,9 @@ Ce répertoire contient nos fichiers pour le livrable 2 du projet final de SEG25
 
 ## Information Admin connexion :
 E-mail : admin@admin.com
+
 Password : admin123
+
 ## Modèle de domaine
 
 ![Modèle de domaine UML](domain-model.PNG)
