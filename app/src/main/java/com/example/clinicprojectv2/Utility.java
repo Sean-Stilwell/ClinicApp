@@ -61,6 +61,14 @@ public class Utility {
 		return (!TextUtils.isEmpty(service))&&(service.matches("^[a-zA-Z]*$"))  ;
 	}
 
+	/**
+	 * This method validates if a given phone number is valid or not.
+	 * It throws an exception if the parameter is null.
+	 * We consider several types of input as valid.
+	 *
+	 * @param phoneNumber phone number to be validates
+	 * @return true if phone number is valid, false otherwise.
+	 * */
 	public static boolean isValidPhoneNumber(String phoneNumber){
 		// If the phone number is null, we throw an exception
 		if(phoneNumber == null){
@@ -84,7 +92,18 @@ public class Utility {
 		}
 	}
 
+	/**
+	 * This method validates if a given address is valid or not.
+	 * It throws an exception if the parameter is null.
+	 * We consider several types of input as valid.
+	 *
+	 * @param address address to be validates
+	 * @return true if address is valid, false otherwise.
+	 * */
 	public static boolean isValidAddress(String address){
+		if (address == null){
+			throw new NullPointerException();
+		}
 		// Validating the address value
 		if (address.matches("\\d+\\s+([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)")){
 			return true;
