@@ -54,7 +54,7 @@ public class Workday {
      * @return True if the closing time is after opening time.
      */
     private boolean isValidWorkingHours(LocalTime startTime, LocalTime endTime) {
-        if(startTime.compareTo(endTime) > 0) return true;
+        if (startTime.compareTo(endTime) > 0) return true;
         return false;
     }
 
