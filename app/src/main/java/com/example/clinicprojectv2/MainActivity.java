@@ -25,4 +25,8 @@ public class MainActivity extends AppCompatActivity {
     public void openLoginPage(View view) {
         startActivity(new Intent(MainActivity.this, LoginScreen.class));
     }
+
+    public void openRatePage(View view) {
+        startActivity(new Intent(MainActivity.this, RateApp.class));
+    }
 }
