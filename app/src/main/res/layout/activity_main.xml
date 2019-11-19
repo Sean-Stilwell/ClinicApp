@@ -61,6 +61,13 @@
                 android:onClick="openCreationPage"
                 android:text="Inscription" />
 
+            <Button
+                android:id="@+id/rateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="59dp"
+                android:onClick="openRatePage"
+                android:text="Évaluez-nous" />
+
         </LinearLayout>
 
     </LinearLayout>
