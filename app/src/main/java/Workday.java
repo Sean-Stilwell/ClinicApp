@@ -12,6 +12,7 @@ public class Workday {
     public static final int SUNDAY = 6;
 
     // Instance variables
+    private int clinicId;
     private int weekday;
     private LocalTime startTime;
     private LocalTime endTime;
@@ -19,19 +20,22 @@ public class Workday {
 
     /**
      * Constructor for the Workday object.
+     * @param clinicId The unique ID of the clinic in question (FK).
      * @param weekday The weekday as enumerated above (Monday through Sunday).
      * @param startTime Opening time for the current workday.
      * @param endTime Closing time for the current workday.
      * @param isClosed True if the clinic is closed on the current workday.
      */
-    public Workday(int weekday, LocalTime startTime, LocalTime endTime, boolean isClosed) {
+    public Workday(int clinicId, int weekday, LocalTime startTime, LocalTime endTime, boolean isClosed) {
 
         if (!isValidWeekday(weekday))
-            throw new IllegalArgumentException("Please specify a valid weekday (Monday through Sunday).");
+            throw new IllegalArgumentException("The specified weekday is invalid.");
 
         if (!isValidWorkingHours(startTime, endTime))
             throw new IllegalArgumentException("Opening time must be before closing time.");
 
+        this.clinicId = clinicId;
+        this.weekday = weekday;
         this.startTime = startTime;
         this.endTime = endTime;
         this.isClosed = isClosed;

@@ -41,11 +41,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right|center_vertical"
-                        android:text="Closed" />
+                        android:layoutDirection="rtl"
+                        android:onClick="toggleHoursFields"
+                        android:text="Closed"
+                        android:textAlignment="textEnd" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fieldContainerMonday"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -93,11 +97,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right|center_vertical"
-                        android:text="Closed" />
+                        android:layoutDirection="rtl"
+                        android:onClick="toggleHoursFields"
+                        android:text="Closed"
+                        android:textAlignment="textEnd" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fieldContainerTuesday"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -145,11 +153,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right|center_vertical"
-                        android:text="Closed" />
+                        android:layoutDirection="rtl"
+                        android:onClick="toggleHoursFields"
+                        android:text="Closed"
+                        android:textAlignment="textEnd" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fieldContainerWednesday"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -197,11 +209,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right|center_vertical"
-                        android:text="Closed" />
+                        android:layoutDirection="rtl"
+                        android:onClick="toggleHoursFields"
+                        android:text="Closed"
+                        android:textAlignment="textEnd" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fieldContainerThursday"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -249,11 +265,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right|center_vertical"
-                        android:text="Closed" />
+                        android:layoutDirection="rtl"
+                        android:onClick="toggleHoursFields"
+                        android:text="Closed"
+                        android:textAlignment="textEnd" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fieldContainerFriday"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -301,11 +321,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right|center_vertical"
-                        android:text="Closed" />
+                        android:layoutDirection="rtl"
+                        android:onClick="toggleHoursFields"
+                        android:text="Closed"
+                        android:textAlignment="textEnd" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fieldContainerSaturday"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -353,11 +377,15 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="right|center_vertical"
-                        android:text="Closed" />
+                        android:layoutDirection="rtl"
+                        android:onClick="toggleHoursFields"
+                        android:text="Closed"
+                        android:textAlignment="textEnd" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/fieldContainerSunday"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
@@ -393,14 +421,14 @@
                     android:weightSum="2">
 
                     <Button
-                        android:id="@+id/button3"
+                        android:id="@+id/btnCancel"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:text="@android:string/cancel" />
 
                     <Button
-                        android:id="@+id/button"
+                        android:id="@+id/btnSave"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
