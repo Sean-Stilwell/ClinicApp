@@ -63,8 +63,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:editable="false"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
 
                     <EditText
                         android:id="@+id/mondayFrom"
@@ -72,7 +75,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -120,7 +125,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
 
                     <EditText
                         android:id="@+id/tuesdayTo"
@@ -128,7 +135,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -176,7 +185,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
 
                     <EditText
                         android:id="@+id/wednesdayFrom"
@@ -184,7 +195,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -232,7 +245,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
 
                     <EditText
                         android:id="@+id/thursdayTo"
@@ -240,7 +255,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -288,7 +305,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
 
                     <EditText
                         android:id="@+id/fridayTo"
@@ -296,7 +315,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -344,7 +365,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
 
                     <EditText
                         android:id="@+id/saturdayFrom"
@@ -352,7 +375,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -400,7 +425,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
 
                     <EditText
                         android:id="@+id/sundayTo"
@@ -408,7 +435,9 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:ems="10"
-                        android:inputType="time" />
+                        android:focusable="false"
+                        android:inputType="time"
+                        android:onClick="showTimePickerDialog" />
                 </LinearLayout>
 
                 <LinearLayout

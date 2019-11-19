@@ -1,11 +1,13 @@
 package com.example.clinicprojectv2;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.DialogFragment;
 
 import android.opengl.Visibility;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 
 public class WorkingHoursActivity extends AppCompatActivity {
 
@@ -49,5 +51,10 @@ public class WorkingHoursActivity extends AppCompatActivity {
         }
 
         target.setVisibility(visibility);
+    }
+
+    public void showTimePickerDialog(View v) {
+        DialogFragment newFragment = new TimePickerFragment((EditText)v);
+        newFragment.show(getSupportFragmentManager(), "Time Picker");
     }
 }
