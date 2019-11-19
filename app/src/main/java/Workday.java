@@ -1,0 +1,66 @@
+import java.time.LocalTime;
+
+public class Workday {
+
+    // Public constants
+    public static final int MONDAY = 0;
+    public static final int TUESDAY = 1;
+    public static final int WEDNESDAY = 2;
+    public static final int THURSDAY = 3;
+    public static final int FRIDAY = 4;
+    public static final int SATURDAY = 5;
+    public static final int SUNDAY = 6;
+
+    // Instance variables
+    private int weekday;
+    private LocalTime startTime;
+    private LocalTime endTime;
+    private boolean isClosed;
+
+    /**
+     * Constructor for the Workday object.
+     * @param weekday The weekday as enumerated above (Monday through Sunday).
+     * @param startTime Opening time for the current workday.
+     * @param endTime Closing time for the current workday.
+     * @param isClosed True if the clinic is closed on the current workday.
+     */
+    public Workday(int weekday, LocalTime startTime, LocalTime endTime, boolean isClosed) {
+
+        if (!isValidWeekday(weekday))
+            throw new IllegalArgumentException("Please specify a valid weekday (Monday through Sunday).");
+
+        if (!isValidWorkingHours(startTime, endTime))
+            throw new IllegalArgumentException("Opening time must be before closing time.");
+
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.isClosed = isClosed;
+    }
+
+    /**
+     * Checks if the specified weekday is valid as enumerated above. (Monday through Sunday).
+     * @param weekday The weekday as enumerated above (Monday through Sunday).
+     * @return True if the weekday is valid.
+     */
+    private boolean isValidWeekday(int weekday) {
+        if (weekday >= Workday.MONDAY && weekday <= Workday.SUNDAY) return true;
+        return false;
+    }
+
+    /**
+     * Checks if the specified closing time is after opening time.
+     * @param startTime Opening time for the current workday.
+     * @param endTime Closing time for the current workday.
+     * @return True if the closing time is after opening time.
+     */
+    private boolean isValidWorkingHours(LocalTime startTime, LocalTime endTime) {
+        if(startTime.compareTo(endTime) > 0) return true;
+        return false;
+    }
+
+    // Getters
+    public int getWeekday() { return this.weekday; }
+    public LocalTime getStartTime() { return this.startTime; }
+    public LocalTime getEndTime() { return this.endTime; }
+    public boolean isClosed() { return this.isClosed; }
+}
