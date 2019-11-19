@@ -16,7 +16,6 @@ public class RateApp extends AppCompatActivity {
 
     private static TextView text;
     private static RatingBar ratingBar;
-    private static
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
