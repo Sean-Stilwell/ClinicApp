@@ -47,8 +47,7 @@ public class Workday {
      * @return True if the weekday is valid.
      */
     private boolean isValidWeekday(int weekday) {
-        if (weekday >= Workday.MONDAY && weekday <= Workday.SUNDAY) return true;
-        return false;
+        return (weekday >= Workday.MONDAY && weekday <= Workday.SUNDAY);
     }
 
     /**
@@ -58,8 +57,7 @@ public class Workday {
      * @return True if the closing time is after opening time.
      */
     private boolean isValidWorkingHours(LocalTime startTime, LocalTime endTime) {
-        if (startTime.compareTo(endTime) > 0) return true;
-        return false;
+        return (startTime.compareTo(endTime) > 0);
     }
 
     // Getters
