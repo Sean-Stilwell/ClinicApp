@@ -49,6 +49,6 @@ public class TimePickerFragment extends DialogFragment
     }
 
     public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
-        editText.setText(hourOfDay + ":" + minute);
+        editText.setText(hourOfDay + ":" + String.format("%02d", minute));
     }
 }
