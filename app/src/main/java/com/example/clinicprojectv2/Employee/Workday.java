@@ -14,7 +14,7 @@ public class Workday {
     public static final int SUNDAY = 6;
 
     // Instance variables
-    private int clinicId;
+    private String clinicId;
     private int weekday;
     private LocalTime startTime;
     private LocalTime endTime;
@@ -28,7 +28,7 @@ public class Workday {
      * @param endTime Closing time for the current workday.
      * @param isClosed True if the clinic is closed on the current workday.
      */
-    public Workday(int clinicId, int weekday, LocalTime startTime, LocalTime endTime, boolean isClosed) {
+    public Workday(String clinicId, int weekday, LocalTime startTime, LocalTime endTime, boolean isClosed) {
 
         if (!isValidWeekday(weekday))
             throw new IllegalArgumentException("The specified weekday is invalid.");
@@ -63,8 +63,28 @@ public class Workday {
     }
 
     // Getters
+    public String getClinicId() { return this.clinicId; }
     public int getWeekday() { return this.weekday; }
     public LocalTime getStartTime() { return this.startTime; }
     public LocalTime getEndTime() { return this.endTime; }
     public boolean isClosed() { return this.isClosed; }
+
+    public void setWeekday(int weekday) {
+        if (!isValidWeekday(weekday))
+            throw new IllegalArgumentException("The specified weekday is invalid.");
+
+        this.weekday = weekday;
+    }
+
+    public void setStartTime(LocalTime startTime) {
+        this.startTime = startTime;
+    }
+
+    public void setEndTime(LocalTime endTime) {
+        this.endTime = endTime;
+    }
+
+    public void setClosed(boolean isClosed) {
+        this.isClosed = isClosed;
+    }
 }
