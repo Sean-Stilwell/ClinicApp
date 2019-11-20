@@ -101,19 +101,7 @@ public class Utility {
 	 * @return true if address is valid, false otherwise.
 	 * */
 	public static boolean isValidAddress(String address){
-		if (address == null){
-			throw new NullPointerException();
-		}
-		// Validating the address value
-		if (address.matches("\\d+\\s+([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)")){
-			return true;
-		}
-		if (address.matches("\\d+\\s+([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+\\s[a-zA-Z]+)")){
-			return true;
-		}
-		else {
-			return false;
-		}
+		return(isValidName(address));
 	}
 }
 

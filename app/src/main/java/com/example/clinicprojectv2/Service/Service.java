@@ -22,11 +22,11 @@ public class Service {
         this.id = id;
     }
 
-    /* Default constructor not needed for now
-    public Service(){
+
+    public Service(){ //Serialize
 
     }
-    */
+
 
     public String getServicePerformerAsString(){
 
