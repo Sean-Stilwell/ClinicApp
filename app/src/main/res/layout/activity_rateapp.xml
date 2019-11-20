@@ -101,7 +101,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
-                android:text="Votre évaluation apparaîtra ici" />
+                android:text="Votre évaluation apparaîtra ici"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
 
             <Space
                 android:layout_width="wrap_content"
