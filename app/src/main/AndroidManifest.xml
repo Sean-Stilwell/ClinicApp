@@ -13,7 +13,7 @@
             android:name=".Administrator.AdminMainActivities.AdminActivity"
             android:label="@string/title_activity_admin"></activity>
         <activity
-            android:name=".WorkingHoursActivity"
+            android:name=".Employee.WorkingHoursActivity"
             android:label="@string/title_clinic_hours"
             android:exported="true" />
         <activity android:name=".CreateAccount" />

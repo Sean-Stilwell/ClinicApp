@@ -1,3 +1,5 @@
+package com.example.clinicprojectv2.Employee;
+
 import java.time.LocalTime;
 
 public class Workday {
@@ -19,7 +21,7 @@ public class Workday {
     private boolean isClosed;
 
     /**
-     * Constructor for the Workday object.
+     * Constructor for the com.example.clinicprojectv2.Employee.Workday object.
      * @param clinicId The unique ID of the clinic in question (FK).
      * @param weekday The weekday as enumerated above (Monday through Sunday).
      * @param startTime Opening time for the current workday.

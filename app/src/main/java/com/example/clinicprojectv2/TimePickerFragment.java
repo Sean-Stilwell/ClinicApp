@@ -33,14 +33,14 @@ public class TimePickerFragment extends DialogFragment
         int hour = c.get(Calendar.HOUR_OF_DAY);
         int minute = c.get(Calendar.MINUTE);
 
-        if (editText.getText().toString() != "") {
+        // If a time is already specified, use that instead of the default
+        if (editText.getText().toString().trim().length() > 0) {
             try {
-                SimpleDateFormat timeFormat = new SimpleDateFormat("HH:mm");
-                Date time = timeFormat.parse(editText.getText().toString());
-                hour = time.getHours();
-                minute = time.getMinutes();
+                LocalTime time = LocalTime.parse(editText.getText().toString());
+                hour = time.getHour();
+                minute = time.getMinute();
             } catch (Exception e) {
-                System.out.println("Error - defaulting to current time");
+                throw new IllegalArgumentException("Could not parse time");
             }
         }
 
