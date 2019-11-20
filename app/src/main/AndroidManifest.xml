@@ -14,7 +14,7 @@
             android:label="@string/title_activity_admin"></activity>
         <activity
             android:name=".WorkingHoursActivity"
-            android:label="Modify Hours"
+            android:label="@string/title_clinic_hours"
             android:exported="true" />
         <activity android:name=".CreateAccount" />
         <activity android:name=".WelcomeScreen" />
