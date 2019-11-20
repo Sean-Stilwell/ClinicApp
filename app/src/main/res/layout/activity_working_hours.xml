@@ -26,8 +26,8 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -37,7 +37,9 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
-                        android:text="Monday" />
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Monday"
+                        android:textSize="16sp" />
 
                     <CheckBox
                         android:id="@+id/isMondayClosed"
@@ -46,11 +48,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="right|center_vertical"
                         android:layoutDirection="rtl"
                         android:onClick="toggleHoursFields"
                         android:text="Closed"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -61,7 +65,7 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <EditText
@@ -74,7 +78,15 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="to" />
 
                     <EditText
                         android:id="@+id/mondayTo"
@@ -85,7 +97,8 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -95,8 +108,8 @@
                     android:background="#EEEEEE"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -106,7 +119,9 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
-                        android:text="Tuesday" />
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Tuesday"
+                        android:textSize="16sp" />
 
                     <CheckBox
                         android:id="@+id/isTuesdayClosed"
@@ -115,11 +130,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="right|center_vertical"
                         android:layoutDirection="rtl"
                         android:onClick="toggleHoursFields"
                         android:text="Closed"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -131,7 +148,7 @@
                     android:background="#EEEEEE"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <EditText
@@ -143,7 +160,15 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="to" />
 
                     <EditText
                         android:id="@+id/tuesdayTo"
@@ -154,7 +179,8 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -163,8 +189,8 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -174,7 +200,9 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
-                        android:text="Wednesday" />
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Wednesday"
+                        android:textSize="16sp" />
 
                     <CheckBox
                         android:id="@+id/isWednesdayClosed"
@@ -183,11 +211,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="right|center_vertical"
                         android:layoutDirection="rtl"
                         android:onClick="toggleHoursFields"
                         android:text="Closed"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -198,7 +228,7 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <EditText
@@ -210,7 +240,15 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="to" />
 
                     <EditText
                         android:id="@+id/wednesdayTo"
@@ -221,7 +259,8 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -231,8 +270,8 @@
                     android:background="#EEEEEE"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -242,7 +281,9 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
-                        android:text="Thursday" />
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Thursday"
+                        android:textSize="16sp" />
 
                     <CheckBox
                         android:id="@+id/isThursdayClosed"
@@ -251,11 +292,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="right|center_vertical"
                         android:layoutDirection="rtl"
                         android:onClick="toggleHoursFields"
                         android:text="Closed"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -267,7 +310,7 @@
                     android:background="#EEEEEE"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <EditText
@@ -279,7 +322,15 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="to" />
 
                     <EditText
                         android:id="@+id/thursdayTo"
@@ -290,7 +341,8 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -299,8 +351,8 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -310,7 +362,9 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
-                        android:text="Friday" />
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Friday"
+                        android:textSize="16sp" />
 
                     <CheckBox
                         android:id="@+id/isFridayClosed"
@@ -319,11 +373,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="right|center_vertical"
                         android:layoutDirection="rtl"
                         android:onClick="toggleHoursFields"
                         android:text="Closed"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -334,7 +390,7 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <EditText
@@ -346,7 +402,15 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="to" />
 
                     <EditText
                         android:id="@+id/fridayTo"
@@ -357,7 +421,8 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -367,8 +432,8 @@
                     android:background="#EEEEEE"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -378,7 +443,9 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
-                        android:text="Saturday" />
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Saturday"
+                        android:textSize="16sp" />
 
                     <CheckBox
                         android:id="@+id/isSaturdayClosed"
@@ -387,11 +454,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="right|center_vertical"
                         android:layoutDirection="rtl"
                         android:onClick="toggleHoursFields"
                         android:text="Closed"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -403,7 +472,7 @@
                     android:background="#EEEEEE"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <EditText
@@ -415,7 +484,15 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView17"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="to" />
 
                     <EditText
                         android:id="@+id/saturdayTo"
@@ -426,7 +503,8 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -435,8 +513,8 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingTop="10dp"
-                    android:paddingBottom="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <TextView
@@ -446,7 +524,9 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
-                        android:text="Sunday" />
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="Sunday"
+                        android:textSize="16sp" />
 
                     <CheckBox
                         android:id="@+id/isSundayClosed"
@@ -455,11 +535,13 @@
                         android:layout_marginLeft="20dp"
                         android:layout_marginRight="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:gravity="right|center_vertical"
                         android:layoutDirection="rtl"
                         android:onClick="toggleHoursFields"
                         android:text="Closed"
-                        android:textAlignment="textEnd" />
+                        android:textAlignment="textEnd"
+                        android:textSize="16sp" />
 
                 </LinearLayout>
 
@@ -470,7 +552,7 @@
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
                     android:orientation="horizontal"
-                    android:paddingBottom="10dp"
+                    android:paddingBottom="5dp"
                     android:weightSum="2">
 
                     <EditText
@@ -482,7 +564,15 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
+
+                    <TextView
+                        android:id="@+id/textView18"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="to" />
 
                     <EditText
                         android:id="@+id/sundayTo"
@@ -493,7 +583,8 @@
                         android:ems="10"
                         android:focusable="false"
                         android:inputType="time"
-                        android:onClick="showTimePickerDialog" />
+                        android:onClick="showTimePickerDialog"
+                        android:textAlignment="center" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -512,6 +603,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:fontFamily="sans-serif-condensed"
                         android:text="@android:string/cancel" />
 
                     <Button
@@ -520,6 +612,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:backgroundTint="#2A7DE7"
+                        android:fontFamily="sans-serif-condensed"
                         android:text="Save Changes"
                         android:textColor="#FFFFFF" />
 
