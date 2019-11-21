@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the user clicks the Se Connecter button */
     public void openLoginPage(View view) {
 
-        startActivity(new Intent(MainActivity.this, EmployeeActivity.class));
+        startActivity(new Intent(MainActivity.this, LoginScreen.class));
     }
 
     public void openRatePage(View view) {
