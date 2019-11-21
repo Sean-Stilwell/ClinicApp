@@ -55,6 +55,7 @@ public class WorkingHoursActivity extends AppCompatActivity {
 
         db = FirebaseDatabase.getInstance().getReference();
         clinicId = "012xabc"; // TEST ONLY
+        //clinicId = getIntent().getStringExtra("CLINIC_ID");
 
         setUpListenersForWorkdays();
     }
