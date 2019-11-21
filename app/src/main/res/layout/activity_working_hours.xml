@@ -625,6 +625,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-condensed"
+                android:onClick="updateWorkdays"
                 android:text="@string/btn_save_changes" />
 
         </LinearLayout>

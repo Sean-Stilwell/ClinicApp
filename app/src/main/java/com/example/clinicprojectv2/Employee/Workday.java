@@ -14,11 +14,14 @@ public class Workday {
     public static final int SUNDAY = 6;
 
     // Instance variables
+    private String workdayId;
     private String clinicId;
     private int weekday;
     private LocalTime startTime;
     private LocalTime endTime;
     private boolean isClosed;
+
+    public Workday() {}
 
     /**
      * Constructor for the com.example.clinicprojectv2.Employee.Workday object.
@@ -28,7 +31,10 @@ public class Workday {
      * @param endTime Closing time for the current workday.
      * @param isClosed True if the clinic is closed on the current workday.
      */
-    public Workday(String clinicId, int weekday, LocalTime startTime, LocalTime endTime, boolean isClosed) {
+    public Workday(String workdayId, String clinicId, int weekday, LocalTime startTime, LocalTime endTime, boolean isClosed) {
+
+        if (!isNotNullHours(startTime, endTime, isClosed))
+            throw new IllegalArgumentException("Opening hours must be specified for all open days.");
 
         if (!isValidWeekday(weekday))
             throw new IllegalArgumentException("The specified weekday is invalid.");
@@ -36,6 +42,7 @@ public class Workday {
         if (!isValidWorkingHours(startTime, endTime))
             throw new IllegalArgumentException("Opening time must be before closing time.");
 
+        this.workdayId = workdayId;
         this.clinicId = clinicId;
         this.weekday = weekday;
         this.startTime = startTime;
@@ -59,15 +66,24 @@ public class Workday {
      * @return True if the closing time is after opening time.
      */
     private boolean isValidWorkingHours(LocalTime startTime, LocalTime endTime) {
-        return (startTime.compareTo(endTime) > 0);
+        return (startTime.isBefore(endTime));
+    }
+
+    private boolean isNotNullHours(LocalTime startTime, LocalTime endTime, boolean isClosed) {
+        return (isClosed || (startTime != null && endTime != null));
     }
 
     // Getters
+    public String getWorkdayId() { return this.workdayId; }
     public String getClinicId() { return this.clinicId; }
     public int getWeekday() { return this.weekday; }
     public LocalTime getStartTime() { return this.startTime; }
     public LocalTime getEndTime() { return this.endTime; }
     public boolean isClosed() { return this.isClosed; }
+
+    public void setWorkdayId(String workdayId) { this.workdayId = workdayId; }
+
+    public void setClinicId(String clinicId) { this.clinicId = clinicId; }
 
     public void setWeekday(int weekday) {
         if (!isValidWeekday(weekday))
