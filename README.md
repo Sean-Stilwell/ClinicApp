@@ -10,10 +10,12 @@ Ce répertoire contient nos fichiers pour le livrable 2 du projet final de SEG25
 * Sean Stilwell - 300053246
 * Jean-David Young - 300011498
 
-## Information Admin connexion :
-E-mail : admin@admin.com
+## Comptes :
+**Admin** E-mail : admin@admin.com   Password : admin123
 
-Password : admin123
+**Employee** E-mail : employee@employee.com   Password : employee123
+
+**Patient** E-mail : patient@patient.com   Password : patient123
 
 ## Modèle de domaine
 

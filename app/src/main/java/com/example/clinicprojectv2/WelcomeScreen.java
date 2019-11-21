@@ -34,4 +34,14 @@ public class WelcomeScreen extends AppCompatActivity {
             patientButton.setVisibility(View.GONE);
         }
     }
+
+    public void startAdmin(View view){
+
+    }
+    public void startEmployee(View view){
+
+    }
+    public void startPatient(View view){
+
+    }
 }
