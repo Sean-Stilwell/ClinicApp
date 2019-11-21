@@ -136,12 +136,12 @@ public class WorkingHoursActivity extends AppCompatActivity {
                 db.child("workdays").child(w.getWorkdayId()).setValue(w);
             }
 
-            displayToast("success?");
+            displayToast("Changes saved.");
 
         } catch (IllegalArgumentException e) {
-            displayToast("Illegal:" + e.getMessage());
+            displayToast(e.getMessage());
         } catch (Exception e) {
-            displayToast("Very illegal:" + e.getMessage());
+            displayToast(e.getMessage());
             Log.d("Test", e.getStackTrace().toString());
         }
     }
