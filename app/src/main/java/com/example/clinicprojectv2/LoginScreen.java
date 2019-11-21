@@ -140,7 +140,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Patient patient = dataSnapshot.getValue(Patient.class);
-
+                Global.setUserFirstName(patient.getFirstName());
                 startNewActivityAdminOrPatient(patient);
             }
             @Override
@@ -159,6 +159,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Employee employee = dataSnapshot.getValue(Employee.class);
+                Global.setUserFirstName(employee.getFirstName());
                 getClinicInfo(Objects.requireNonNull(employee));
                 getClinicInfo(employee);
             }
@@ -178,6 +179,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Administrator admin = dataSnapshot.getValue(Administrator.class);
+                Global.setUserFirstName(admin.getFirstName());
                 startNewActivityAdminOrPatient(admin);
             }
             @Override
@@ -205,6 +207,7 @@ public class LoginScreen extends AppCompatActivity {
     }
 
     private void startNewActivityEmployee(Employee employee, Clinic clinic){
+        Global.setUserType(1);
         Intent intent ;
         intent = new Intent(this, EmployeeActivity.class);
         intent.putExtra("EmployeeObject", employee);
@@ -219,7 +222,7 @@ public class LoginScreen extends AppCompatActivity {
         Intent intent ;
 
         if(user instanceof Patient) {
-
+            Global.setUserType(2);
             Patient patient = (Patient) user;
 
             intent = new Intent(this, WelcomeScreen.class);
@@ -228,7 +231,7 @@ public class LoginScreen extends AppCompatActivity {
 
 
         } else if (user instanceof Administrator) {
-
+            Global.setUserType(0);
             Administrator admin = (Administrator) user;
 
             intent = new Intent(this, AdminActivity.class);
