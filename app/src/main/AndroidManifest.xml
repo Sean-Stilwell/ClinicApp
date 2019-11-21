@@ -15,13 +15,8 @@
             android:label="@string/title_activity_admin" />
         <activity
             android:name=".Employee.WorkingHoursActivity"
-<<<<<<< HEAD
-            android:exported="true"
-            android:label="@string/title_clinic_hours" />
-=======
             android:label="@string/title_clinic_hours"
             android:exported="true"></activity>
->>>>>>> b80b40d3ef4e7fb578e9db6317780d274835fe7d
         <activity android:name=".CreateAccount" />
         <activity android:name=".WelcomeScreen" />
         <activity android:name=".LoginScreen" />
