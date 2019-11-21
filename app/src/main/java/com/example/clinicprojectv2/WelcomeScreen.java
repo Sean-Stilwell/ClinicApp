@@ -30,8 +30,10 @@ public class WelcomeScreen extends AppCompatActivity {
         }
         // Change button visibility if the user is not a patient.
         if (Global.getUserRole() != "Patient"){
-            Button patientButton = (Button) findViewById(R.id.button12);
-            patientButton.setVisibility(View.GONE);
+            Button patientButton1 = (Button) findViewById(R.id.button12);
+            patientButton1.setVisibility(View.GONE);
+            Button patientButton2 = (Button) findViewById(R.id.button13);
+            patientButton2.setVisibility(View.GONE);
         }
     }
 
