@@ -6,6 +6,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import com.example.clinicprojectv2.Account.AccountType;
+import com.example.clinicprojectv2.Clinic.Clinic;
 import com.example.clinicprojectv2.Employee.Employee;
 import com.example.clinicprojectv2.Patient.Patient;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,6 +23,7 @@ import java.util.Objects;
 
 public class CreateAccount extends AppCompatActivity {
 
+    public static final String CLINICS = "clinics";
     public static final String USERS = "users";
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
@@ -43,7 +45,6 @@ public class CreateAccount extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
     }
 
     /**
@@ -180,8 +181,21 @@ public class CreateAccount extends AppCompatActivity {
         DatabaseReference dbRef = database.getReference();
         dbRef.child(USERS).child(userUID).setValue(employee);
 
+        this.createAssociatedClinic(userUID);
+
+    }
+
+    private void createAssociatedClinic(String userUID){
+
+        Clinic newClinic = new Clinic(userUID);
+
+        DatabaseReference dbRef = database.getReference();
+        dbRef.child(CLINICS).child(userUID).setValue(newClinic);
+
         startActivity(new Intent(CreateAccount.this, LoginScreen.class));
     }
+
+
 
     public void displayToast(String message){
 

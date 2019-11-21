@@ -2,8 +2,10 @@ package com.example.clinicprojectv2;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.clinicprojectv2.Account.Account;
 import com.example.clinicprojectv2.Account.AccountType;
+import com.example.clinicprojectv2.Clinic.Clinic;
 import com.example.clinicprojectv2.Employee.Employee;
 import com.example.clinicprojectv2.Administrator.Administrator;
+import com.example.clinicprojectv2.Employee.EmployeeActivity;
 import com.example.clinicprojectv2.Patient.Patient;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -32,7 +34,6 @@ public class LoginScreen extends AppCompatActivity {
 
     private FirebaseDatabase database;
     private FirebaseAuth mAuth;
-
     private FirebaseUser userGlobal;
     private AccountType accountType;
 
@@ -44,7 +45,6 @@ public class LoginScreen extends AppCompatActivity {
 
         database = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
-
     }
 
 
@@ -141,7 +141,7 @@ public class LoginScreen extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Patient patient = dataSnapshot.getValue(Patient.class);
 
-                startNewActivity(patient);
+                startNewActivityAdminOrPatient(patient);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -159,7 +159,8 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Employee employee = dataSnapshot.getValue(Employee.class);
-                startNewActivity(employee);
+                getClinicInfo(Objects.requireNonNull(employee));
+                getClinicInfo(employee);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -177,8 +178,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Administrator admin = dataSnapshot.getValue(Administrator.class);
-                startNewActivity(admin);
-
+                startNewActivityAdminOrPatient(admin);
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
@@ -187,12 +187,38 @@ public class LoginScreen extends AppCompatActivity {
         });
     }
 
+    private void getClinicInfo(final Employee employee){
+
+        DatabaseReference dbReference = database.getReference().child(CreateAccount.CLINICS).child(employee.getId());
+        dbReference.addListenerForSingleValueEvent(new ValueEventListener() {
+
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                Clinic clinic = dataSnapshot.getValue(Clinic.class);
+                startNewActivityEmployee(employee, clinic);
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                displayToast("Operation failed.");
+            }
+        });
+    }
+
+    private void startNewActivityEmployee(Employee employee, Clinic clinic){
+        Intent intent ;
+        intent = new Intent(this, EmployeeActivity.class);
+        intent.putExtra("EmployeeObject", employee);
+        intent.putExtra("ClinicObject", clinic);
+        this.startActivity(intent);
+    }
+
+
     // Called if and only if successful retrieval of all information related to user.
-    public void startNewActivity(Account user){
+    public void startNewActivityAdminOrPatient(Account user){
 
         Intent intent ;
 
-        if(user instanceof Patient){
+        if(user instanceof Patient) {
 
             Patient patient = (Patient) user;
 
@@ -200,13 +226,6 @@ public class LoginScreen extends AppCompatActivity {
             intent.putExtra("PatientObject", patient);
             this.startActivity(intent);
 
-        } else if(user instanceof Employee){
-
-            Employee employee = (Employee) user;
-
-            intent = new Intent(this, WelcomeScreen.class);
-            intent.putExtra("EmployeeObject", employee);
-            this.startActivity(intent);
 
         } else if (user instanceof Administrator) {
 

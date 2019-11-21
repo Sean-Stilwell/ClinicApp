@@ -3,20 +3,21 @@ package com.example.clinicprojectv2.Clinic;
 import com.example.clinicprojectv2.Service.Service;
 import com.example.clinicprojectv2.Utility;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Clinic {
+public class Clinic implements Serializable {
 
     public static final String DEFAULTNAME = "Unamed";
     public static final String DEFAULTPHONE = "1111111111";
     public static final String[] PROVINCES = {Address.NL, Address.PE,
-            Address.NS, Address.NB,
-            Address.QC, Address.ON,
-            Address.MB, Address.SK,
-            Address.AB, Address.BC,
-            Address.YT, Address.NT,
-            Address.NU};
+                                                Address.NS, Address.NB,
+                                                Address.QC, Address.ON,
+                                                Address.MB, Address.SK,
+                                                Address.AB, Address.BC,
+                                                Address.YT, Address.NT,
+                                                Address.NU};
 
     public static final String[] ALLPAYMENTMETHODS = {"CASH","DEBIT","CREDIT"} ;
 
