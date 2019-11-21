@@ -1,11 +1,12 @@
 package com.example.clinicprojectv2.Clinic;
 
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class WorkWeek {
+public class WorkWeek implements Serializable {
 
     private List<Workday> workdays;
 

@@ -94,7 +94,6 @@ public class ServicesManagementFragment extends Fragment {
     }
 
     private void setLongClickListenerForListView(){
-
         listViewServices.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {

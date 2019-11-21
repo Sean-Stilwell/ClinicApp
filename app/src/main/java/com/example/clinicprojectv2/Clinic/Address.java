@@ -2,7 +2,9 @@ package com.example.clinicprojectv2.Clinic;
 
 import com.example.clinicprojectv2.Utility;
 
-public class Address {
+import java.io.Serializable;
+
+public class Address implements Serializable {
 
     public static final CanadianProvince DEFAULTPROVINCE = CanadianProvince.ON;
     public static final int DEFAULTNUMBER = 100;

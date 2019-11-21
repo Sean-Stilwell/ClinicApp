@@ -1,6 +1,8 @@
 package com.example.clinicprojectv2.Clinic;
 
-public class Workday {
+import java.io.Serializable;
+
+public class Workday implements Serializable {
 
     private Day dayOfTheWeek;
     private Time startTime;
