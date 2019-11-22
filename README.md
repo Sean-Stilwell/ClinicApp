@@ -1,7 +1,7 @@
-# SEG2505 - Projet Final - Livrable 3
-Mercredi, le 20 novembre, 2019
+# SEG2505 - Projet Final - Livrable 4
+Mercredi, le 4 décembre, 2019
 
-Ce répertoire contient nos fichiers pour le livrable 2 du projet final de SEG2505 en automne, 2019.
+Ce répertoire contient nos fichiers pour le projet final de SEG2505 en automne, 2019.
 
 ## Équipe
 * Mohamed Reda Ben Taleb - 300043376
