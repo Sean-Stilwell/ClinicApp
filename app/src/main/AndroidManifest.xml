@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookingsScreen"></activity>
+        <activity android:name=".SearchClinics"></activity>
+        <activity android:name=".CreateBooking" />
+        <activity android:name=".BookingsScreen" />
         <activity android:name=".Employee.EmployeeActivity" />
         <activity
             android:name=".Administrator.AdminMainActivities.AdminActivity"
