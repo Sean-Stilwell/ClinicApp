@@ -8,7 +8,10 @@
 
     <string name="title_clinic">Modify Clinic</string>
     <string name="title_clinic_hours">Modify Clinic Hours</string>
+    <string name="title_rate_clinic">Rate Clinic</string>
 
+    <string name="label_additional_comments">Additional Comments</string>
+    <string name="label_additional_comments_opt">Additional Comments (Optional)</string>
     <string name="label_address">Address</string>
     <string name="label_city">City</string>
     <string name="label_clinic_info">Clinic Details</string>
@@ -27,6 +30,7 @@
     <string name="label_services">Services</string>
     <string name="label_street_name">Street Name</string>
     <string name="label_street_number">Street Number</string>
+    <string name="label_prompt_rating">What did you think of this clinic?</string>
 
     <string name="btn_add">Add</string>
     <string name="btn_save_changes">Save Changes</string>
