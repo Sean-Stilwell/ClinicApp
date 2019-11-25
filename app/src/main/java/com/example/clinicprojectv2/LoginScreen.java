@@ -140,7 +140,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Patient patient = dataSnapshot.getValue(Patient.class);
-                Global.setUserFirstName(patient.getFirstName());
+                Global.setAccount(patient);
                 startNewActivityAdminOrPatient(patient);
             }
             @Override
@@ -159,7 +159,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Employee employee = dataSnapshot.getValue(Employee.class);
-                Global.setUserFirstName(employee.getFirstName());
+                Global.setAccount(employee);
                 getClinicInfo(Objects.requireNonNull(employee));
                 getClinicInfo(employee);
             }
@@ -179,7 +179,7 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Administrator admin = dataSnapshot.getValue(Administrator.class);
-                Global.setUserFirstName(admin.getFirstName());
+                Global.setAccount(admin);
                 startNewActivityAdminOrPatient(admin);
             }
             @Override
