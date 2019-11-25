@@ -5,14 +5,16 @@ import com.example.clinicprojectv2.Clinic.Time;
 import com.example.clinicprojectv2.Employee.Employee;
 import com.example.clinicprojectv2.Service.Service;
 
-public class Booking {
+public class Booking implements Comparable<Booking> {
     private Clinic bookedClinic;
     private Service bookedService;
     private Employee bookedEmployee;
     private Time startTime;
     private Time endTime;
+    private String identifierString;
+    private int identifier;
 
-    public Booking(Clinic clinic, Service service, Employee employee, Time time){
+    public Booking(Clinic clinic, Service service, Employee employee, Time time, int year, int month, int day){
         // Verifying that no null parameters were given.
         if (clinic == null || service == null || employee == null || time == null){
             throw new NullPointerException();
@@ -24,6 +26,8 @@ public class Booking {
         bookedEmployee = employee;
         startTime = time;
         setEndTime();
+        identifierString = Integer.toString(year) + Integer.toString(month) + Integer.toString(day) + time.toString();
+        identifier = Integer.parseInt(identifierString);
     }
 
     // getters for instance variables
@@ -41,6 +45,17 @@ public class Booking {
     }
     public Time getEndTime(){
         return this.endTime;
+    }
+    public int getIdentifier(){return this.identifier;}
+
+    @Override
+    public int compareTo(Booking other){
+        if (this.identifier < other.getIdentifier()){
+            return -1;
+        }
+        else{
+            return 1;
+        }
     }
 
     //setters for instance variables - allows a booking to be modified
