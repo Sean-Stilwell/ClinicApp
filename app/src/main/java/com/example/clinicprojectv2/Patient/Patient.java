@@ -32,5 +32,7 @@ public class Patient extends Account {
     public void removeBooking(Booking booking){
         bookings.removeBooking(booking);
     }
-
+    public BookingList getBookings(){
+        return bookings;
+    }
 }

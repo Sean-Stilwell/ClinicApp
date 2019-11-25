@@ -13,6 +13,7 @@ public class Booking implements Comparable<Booking> {
     private Time endTime;
     private String identifierString;
     private int identifier;
+    private String date;
 
     public Booking(Clinic clinic, Service service, Employee employee, Time time, int year, int month, int day){
         // Verifying that no null parameters were given.
@@ -27,6 +28,7 @@ public class Booking implements Comparable<Booking> {
         startTime = time;
         setEndTime();
         identifierString = Integer.toString(year) + Integer.toString(month) + Integer.toString(day) + time.toString();
+        date = Integer.toString(day) + "/" + Integer.toString(month) + "/" + Integer.toString(year);
         identifier = Integer.parseInt(identifierString);
     }
 
@@ -47,6 +49,7 @@ public class Booking implements Comparable<Booking> {
         return this.endTime;
     }
     public int getIdentifier(){return this.identifier;}
+    public String getDate(){return this.date;}
 
     @Override
     public int compareTo(Booking other){
@@ -56,6 +59,12 @@ public class Booking implements Comparable<Booking> {
         else{
             return 1;
         }
+    }
+
+    //To string method for displaying a booking
+    public String toString(){
+        String returnString = bookedService.getName() + " - " + bookedService.getId() + "\n scheduled for " + getDate() + " at " + Integer.toString(getStartTime().getHour()) +"h"+Integer.toString(getStartTime().getMinute());
+        return returnString;
     }
 
     //setters for instance variables - allows a booking to be modified
