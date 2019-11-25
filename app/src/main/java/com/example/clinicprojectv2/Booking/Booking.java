@@ -6,7 +6,7 @@ import com.example.clinicprojectv2.Employee.Employee;
 import com.example.clinicprojectv2.Patient.Patient;
 import com.example.clinicprojectv2.Service.Service;
 
-public class Booking implements Comparable<Booking> {
+public class Booking {
     private Clinic bookedClinic;
     private Service bookedService;
     private Employee bookedEmployee;
@@ -55,16 +55,6 @@ public class Booking implements Comparable<Booking> {
     }
     public int getIdentifier(){return this.identifier;}
     public String getDate(){return this.date;}
-
-    @Override
-    public int compareTo(Booking other){
-        if (this.identifier < other.getIdentifier()){
-            return -1;
-        }
-        else{
-            return 1;
-        }
-    }
 
     //To string method for displaying a booking
     public String toString(){
