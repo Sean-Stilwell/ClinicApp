@@ -63,7 +63,9 @@ public class Booking implements Comparable<Booking> {
 
     //To string method for displaying a booking
     public String toString(){
-        String returnString = bookedService.getName() + " - " + bookedService.getId() + "\n scheduled for " + getDate() + " at " + Integer.toString(getStartTime().getHour()) +"h"+Integer.toString(getStartTime().getMinute());
+        String returnString = bookedService.getName() + " - " + bookedService.getId() +
+                "\n scheduled for " + getDate() + " at " + Integer.toString(getStartTime().getHour())
+                +"h"+Integer.toString(getStartTime().getMinute());
         return returnString;
     }
 

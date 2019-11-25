@@ -38,4 +38,8 @@ public class BookingList {
         }
         return returnString;
     }
+
+    public boolean isEmpty(){
+        return bookings.isEmpty();
+    }
 }
