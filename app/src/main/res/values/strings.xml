@@ -28,6 +28,7 @@
     <string name="label_street_name">Street Name</string>
     <string name="label_street_number">Street Number</string>
 
+    <string name="btn_add">Add</string>
     <string name="btn_save_changes">Save Changes</string>
     <string name="btn_cancel">Cancel</string>
 

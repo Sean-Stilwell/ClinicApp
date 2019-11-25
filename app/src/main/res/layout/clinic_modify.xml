@@ -45,7 +45,7 @@
                         android:ems="10"
                         android:fontFamily="sans-serif-condensed"
                         android:hint="@string/label_clinic_name"
-                        android:inputType="textPersonName" />
+                        android:inputType="textPersonName|textCapSentences" />
 
                 </LinearLayout>
 
@@ -81,7 +81,8 @@
                         android:ems="10"
                         android:fontFamily="sans-serif-condensed"
                         android:hint="@string/label_street_number"
-                        android:inputType="textPersonName" />
+                        android:inputType="number"
+                        android:nextFocusDown="@+id/streetName" />
 
                     <EditText
                         android:id="@+id/streetName"
@@ -91,7 +92,7 @@
                         android:ems="10"
                         android:fontFamily="sans-serif-condensed"
                         android:hint="@string/label_street_name"
-                        android:inputType="textPersonName" />
+                        android:inputType="textCapSentences" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -107,7 +108,8 @@
                         android:ems="10"
                         android:fontFamily="sans-serif-condensed"
                         android:hint="@string/label_city"
-                        android:inputType="textPersonName" />
+                        android:inputType="textCapSentences"
+                        android:nextFocusDown="@+id/province" />
 
                     <Spinner
                         android:id="@+id/province"
@@ -138,7 +140,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:hint="@string/label_phone"
-                        android:inputType="textPersonName" />
+                        android:inputType="phone" />
                 </LinearLayout>
 
                 <TextView
@@ -149,6 +151,32 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="@string/label_payment_methods" />
 
+                <ListView
+                    android:id="@+id/paymentMethods"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                </ListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/paymentMethodsSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Button
+                        android:id="@+id/btnAddPaymentMethod"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="@string/btn_add" />
+                </LinearLayout>
+
                 <TextView
                     android:id="@+id/textView33"
                     android:layout_width="match_parent"
@@ -157,6 +185,33 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="@string/label_insurance_types" />
 
+                <ListView
+                    android:id="@+id/insurances"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                </ListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/insurancesSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Button
+                        android:id="@+id/btnAddInsurance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="@string/btn_add" />
+
+                </LinearLayout>
+
                 <TextView
                     android:id="@+id/textView34"
                     android:layout_width="match_parent"
@@ -164,6 +219,32 @@
                     android:layout_marginTop="10dp"
                     android:fontFamily="sans-serif-condensed"
                     android:text="@string/label_services" />
+
+                <ListView
+                    android:id="@+id/linksToServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                </ListView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/servicesSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8" />
+
+                    <Button
+                        android:id="@+id/buttonAddService"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+                        android:text="@string/btn_add" />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/textView35"
@@ -179,6 +260,7 @@
                     android:layout_height="43dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
                     android:text="@string/label_modify_hours" />
 
             </LinearLayout>
