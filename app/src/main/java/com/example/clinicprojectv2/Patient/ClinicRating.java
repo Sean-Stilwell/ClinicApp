@@ -4,7 +4,7 @@ import com.example.clinicprojectv2.Clinic.Clinic;
 
 public class ClinicRating {
 
-    private String id;
+    private final ThreadLocal<String> id = new ThreadLocal<String>();
     private Clinic clinic;
     private Patient patient;
     private int rating;
@@ -21,7 +21,7 @@ public class ClinicRating {
      * @param comment the optional comment associated with the patient's rating
      */
     public ClinicRating(String id, Clinic clinic, Patient patient, int rating, String comment) {
-        this.id = id;
+        this.id.set(id);
         this.clinic = clinic;
         this.patient = patient;
         this.rating = rating;
@@ -31,11 +31,11 @@ public class ClinicRating {
     // Getters and setters
 
     public void setId(String id) {
-        this.id = id;
+        this.id.set(id);
     }
 
     public String getId() {
-        return this.id;
+        return this.id.get();
     }
 
     public void setClinic(Clinic clinic) {

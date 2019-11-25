@@ -6,10 +6,12 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="title_create_account">Create Account</string>
     <string name="title_clinic">Modify Clinic</string>
     <string name="title_clinic_hours">Modify Clinic Hours</string>
     <string name="title_rate_clinic">Rate Clinic</string>
 
+    <string name="label_account_type">Account Type</string>
     <string name="label_additional_comments">Additional Comments</string>
     <string name="label_additional_comments_opt">Additional Comments (Optional)</string>
     <string name="label_address">Address</string>
@@ -18,23 +20,30 @@
     <string name="label_clinic_hours">Clinic Hours</string>
     <string name="label_clinic_name">Clinic Name</string>
     <string name="label_closed">Closed</string>
+    <string name="label_create_account_instr">Please fill out the information below to register.</string>
+    <string name="label_email">Email</string>
     <string name="label_employee_info">Employee Info</string>
     <string name="label_first_name">First Name</string>
     <string name="label_insurance_types">Insurance Types</string>
     <string name="label_last_name">Last Name</string>
     <string name="label_modify_hours">Modify Clinic Hours</string>
     <string name="label_name">Name</string>
+    <string name="label_password">Password</string>
     <string name="label_payment_methods">Payment Methods</string>
     <string name="label_phone">Phone</string>
+    <string name="label_prompt_rating">What did you think of this clinic?</string>
     <string name="label_province">Province</string>
     <string name="label_services">Services</string>
     <string name="label_street_name">Street Name</string>
     <string name="label_street_number">Street Number</string>
-    <string name="label_prompt_rating">What did you think of this clinic?</string>
+    <string name="label_username">Username</string>
+    <string name="label_welcome_text">_WELCOME_TEXT_</string>
 
     <string name="btn_add">Add</string>
-    <string name="btn_save_changes">Save Changes</string>
     <string name="btn_cancel">Cancel</string>
+    <string name="btn_create_account">Create Account</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_save_changes">Save Changes</string>
 
     <string name="monday">Monday</string>
     <string name="tuesday">Tuesday</string>
