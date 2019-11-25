@@ -30,4 +30,12 @@ public class BookingList {
         }
         return false;
     }
+
+    public String getList(){
+        String returnString = "";
+        for (Booking b : bookings){
+            returnString = returnString + b.toString();
+        }
+        return returnString;
+    }
 }
