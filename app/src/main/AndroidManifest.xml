@@ -12,7 +12,6 @@
         <activity android:name=".SearchClinics"></activity>
         <activity android:name=".CreateBooking" />
         <activity android:name=".BookingsScreen" />
-        <activity android:name=".Employee.EmployeeActivity" />
         <activity
             android:name=".Administrator.AdminMainActivities.AdminActivity"
             android:label="@string/title_activity_admin" />
@@ -20,6 +19,10 @@
             android:name=".Employee.WorkingHoursActivity"
             android:exported="true"
             android:label="@string/title_clinic_hours" />
+        <activity
+            android:name=".Employee.EmployeeActivity"
+            android:exported="true"
+            android:label="@string/title_clinic" />
         <activity android:name=".CreateAccount" />
         <activity android:name=".WelcomeScreen" />
         <activity android:name=".LoginScreen" />

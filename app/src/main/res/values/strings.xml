@@ -6,9 +6,27 @@
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
 
+    <string name="title_clinic">Modify Clinic</string>
     <string name="title_clinic_hours">Modify Clinic Hours</string>
 
+    <string name="label_address">Address</string>
+    <string name="label_city">City</string>
+    <string name="label_clinic_info">Clinic Details</string>
+    <string name="label_clinic_hours">Clinic Hours</string>
+    <string name="label_clinic_name">Clinic Name</string>
     <string name="label_closed">Closed</string>
+    <string name="label_employee_info">Employee Info</string>
+    <string name="label_first_name">First Name</string>
+    <string name="label_insurance_types">Insurance Types</string>
+    <string name="label_last_name">Last Name</string>
+    <string name="label_modify_hours">Modify Clinic Hours</string>
+    <string name="label_name">Name</string>
+    <string name="label_payment_methods">Payment Methods</string>
+    <string name="label_phone">Phone</string>
+    <string name="label_province">Province</string>
+    <string name="label_services">Services</string>
+    <string name="label_street_name">Street Name</string>
+    <string name="label_street_number">Street Number</string>
 
     <string name="btn_save_changes">Save Changes</string>
     <string name="btn_cancel">Cancel</string>
@@ -22,4 +40,19 @@
     <string name="sunday">Sunday</string>
 
     <string name="to">to</string>
+    <string-array name="provinces">
+        <item>AB</item>
+        <item>BC</item>
+        <item>NL</item>
+        <item>MB</item>
+        <item>NB</item>
+        <item>NS</item>
+        <item>NT</item>
+        <item>NU</item>
+        <item>ON</item>
+        <item>PE</item>
+        <item>QC</item>
+        <item>SK</item>
+        <item>YT</item>
+    </string-array>
 </resources>
