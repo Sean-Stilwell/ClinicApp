@@ -3,6 +3,7 @@ package com.example.clinicprojectv2.Booking;
 import com.example.clinicprojectv2.Clinic.Clinic;
 import com.example.clinicprojectv2.Clinic.Time;
 import com.example.clinicprojectv2.Employee.Employee;
+import com.example.clinicprojectv2.Patient.Patient;
 import com.example.clinicprojectv2.Service.Service;
 
 public class Booking implements Comparable<Booking> {
@@ -15,7 +16,7 @@ public class Booking implements Comparable<Booking> {
     private int identifier;
     private String date;
 
-    public Booking(Clinic clinic, Service service, Employee employee, Time time, int year, int month, int day){
+    public Booking(Clinic clinic, Service service, Employee employee, Patient patient, Time time, int year, int month, int day){
         // Verifying that no null parameters were given.
         if (clinic == null || service == null || employee == null || time == null){
             throw new NullPointerException();
@@ -30,6 +31,10 @@ public class Booking implements Comparable<Booking> {
         identifierString = Integer.toString(year) + Integer.toString(month) + Integer.toString(day) + time.toString();
         date = Integer.toString(day) + "/" + Integer.toString(month) + "/" + Integer.toString(year);
         identifier = Integer.parseInt(identifierString);
+
+        // Adding the booking to the clinic / patient lists.
+        patient.addBooking(this);
+        clinic.addBooking(this);
     }
 
     // getters for instance variables
