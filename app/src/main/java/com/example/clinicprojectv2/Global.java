@@ -1,8 +1,24 @@
 package com.example.clinicprojectv2;
 
+import com.example.clinicprojectv2.Account.Account;
+
 public class Global {
     private static int userType;
     private static String userFirstName = "name";
+    private static Account savedAccount;
+
+    public static void setAccount(Account account){
+        if (account == null){
+            throw new NullPointerException();
+        }
+        else{
+            savedAccount = account;
+        }
+    }
+
+    public static Account getSavedAccount(){
+        return savedAccount;
+    }
 
     public static void setUserType(int input){
         // Check for valid input
@@ -27,20 +43,5 @@ public class Global {
             return "Patient";
         }
         return null;
-    }
-
-    public static void setUserFirstName(String name){
-        // Check for valid input
-        if (name == null){
-            throw new NullPointerException();
-        }
-        // Set the user's name
-        else{
-            userFirstName = name;
-        }
-    }
-
-    public static String getUserFirstName(){
-        return userFirstName;
     }
 }

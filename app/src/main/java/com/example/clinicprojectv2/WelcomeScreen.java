@@ -17,7 +17,7 @@ public class WelcomeScreen extends AppCompatActivity {
 
         // Set the text for the user.
         TextView text = (TextView) findViewById(R.id.textWelcome);
-        text.setText("Bonjour, " + Global.getUserFirstName() + ". Vous êtes connectés en tant que " + Global.getUserRole() +".");
+        text.setText("Bonjour, " + Global.getSavedAccount().getFirstName() + ". Vous êtes connectés en tant que " + Global.getSavedAccount().getTypeAsString() +".");
 
         // Change button visibility if the user is not an admin.
         if (Global.getUserRole() != "Administrator"){
