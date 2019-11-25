@@ -1,10 +1,12 @@
 package com.example.clinicprojectv2.Patient;
 
+import com.example.clinicprojectv2.Clinic.Clinic;
+
 public class ClinicRating {
 
     private String id;
-    private String clinic;
-    private String patient;
+    private Clinic clinic;
+    private Patient patient;
     private int rating;
     private String comment;
 
@@ -13,12 +15,12 @@ public class ClinicRating {
     /**
      * This method constructs an instance of an employee account.
      * @param id the rating's unique ID
-     * @param clinic the clinic's unique ID
-     * @param patient the patient's unique ID
+     * @param clinic the clinic being rated
+     * @param patient the patient rating the clinic
      * @param rating the patient's rating of the clinic (1 to 5)
      * @param comment the optional comment associated with the patient's rating
      */
-    public ClinicRating(String id, String clinic, String patient, int rating, String comment) {
+    public ClinicRating(String id, Clinic clinic, Patient patient, int rating, String comment) {
         this.id = id;
         this.clinic = clinic;
         this.patient = patient;
@@ -36,19 +38,19 @@ public class ClinicRating {
         return this.id;
     }
 
-    public void setClinic(String clinic) {
+    public void setClinic(Clinic clinic) {
         this.clinic = clinic;
     }
 
-    public String getClinic() {
+    public Clinic getClinic() {
         return this.clinic;
     }
 
-    public void setPatient(String patient) {
+    public void setPatient(Patient patient) {
         this.patient = patient;
     }
 
-    public String getPatient() {
+    public Patient getPatient() {
         return this.patient;
     }
 
