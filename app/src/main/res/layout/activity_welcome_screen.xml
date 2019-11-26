@@ -24,7 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="WelcomeText"
+            android:text="@string/label_welcome_text"
             android:textColor="#FFFFFF"
             android:textSize="24sp" />
 
@@ -36,7 +36,7 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:onClick="startAdmin"
-            android:text="Accèder l'écran d'administration"
+            android:text="Admin Screen"
             android:visibility="visible" />
 
         <Button
@@ -47,27 +47,27 @@
             android:foregroundGravity="center"
             android:gravity="center"
             android:onClick="startEmployee"
-            android:text="Accèder l'écran d'employé" />
+            android:text="Employee Screen" />
 
         <Button
             android:id="@+id/button12"
-            android:layout_width="207dp"
+            android:layout_width="171dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:foregroundGravity="center"
             android:gravity="center"
             android:onClick="openSearch"
-            android:text="Créer une réservation / Chercher un clinique" />
+            android:text="Make a booking / Search for clinics" />
 
         <Button
             android:id="@+id/button13"
-            android:layout_width="wrap_content"
+            android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:foregroundGravity="center"
             android:gravity="center"
             android:onClick="viewBookings"
-            android:text="Voir mes réservations" />
+            android:text="View my bookings" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

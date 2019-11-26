@@ -41,7 +41,7 @@
                     android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="E-mail:"
+                    android:text="@string/label_email"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
 
@@ -74,7 +74,7 @@
                     android:layout_width="210dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Mot de passe:"
+                    android:text="@string/label_password"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp" />
 
@@ -107,7 +107,7 @@
                 android:height="60dp"
                 android:gravity="center"
                 android:onClick="loginClick"
-                android:text="Connexion" />
+                android:text="@string/btn_login" />
 
             <TextView
                 android:id="@+id/textLogin3"

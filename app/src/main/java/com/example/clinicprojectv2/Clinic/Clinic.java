@@ -35,6 +35,8 @@ public class Clinic implements Serializable {
     private List<Service> linksToServices;
     private List<PaymentMethod> paymentMethods;
 
+
+
     //private BookingList bookings;
 
 
@@ -54,6 +56,9 @@ public class Clinic implements Serializable {
         this.insurances = new ArrayList<String>();
         this.paymentMethods = new ArrayList<PaymentMethod>();
         this.linksToServices = new ArrayList<Service>();
+
+        //this.bookings = new BookingList();
+
     }
 
 
@@ -379,6 +384,7 @@ public class Clinic implements Serializable {
     }
 
 
+
     public void removeAllServicesAndSetTo(List<Service> newServices){
 
         if(newServices == null){
@@ -458,5 +464,13 @@ public class Clinic implements Serializable {
     //    public void removeBooking(Booking booking){
     //        bookings.removeBooking(booking);
     //    }
+
+//    public void addBooking(Booking booking){
+//        bookings.addBooking(booking);
+//    }
+//    public void removeBooking(Booking booking){
+//        bookings.removeBooking(booking);
+//    }
+
 }
 

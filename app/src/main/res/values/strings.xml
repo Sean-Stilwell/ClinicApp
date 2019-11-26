@@ -22,6 +22,7 @@
     <string name="label_closed">Closed</string>
     <string name="label_create_account_instr">Please fill out the information below to register.</string>
     <string name="label_email">Email</string>
+    <string name="label_employee">Employee</string>
     <string name="label_employee_info">Employee Info</string>
     <string name="label_first_name">First Name</string>
     <string name="label_insurance_types">Insurance Types</string>
@@ -29,15 +30,18 @@
     <string name="label_modify_hours">Modify Clinic Hours</string>
     <string name="label_name">Name</string>
     <string name="label_password">Password</string>
+    <string name="label_patient">Patient</string>
     <string name="label_payment_methods">Payment Methods</string>
     <string name="label_phone">Phone</string>
     <string name="label_prompt_rating">What did you think of this clinic?</string>
     <string name="label_province">Province</string>
+    <string name="label_rate_app">Rate this app</string>
     <string name="label_services">Services</string>
     <string name="label_street_name">Street Name</string>
     <string name="label_street_number">Street Number</string>
     <string name="label_username">Username</string>
     <string name="label_welcome_text">_WELCOME_TEXT_</string>
+    <string name="label_welcome_text_2">Welcome to the uOttawa Clinics app. To use this service, create an account or login to an existing account.</string>
 
     <string name="btn_add">Add</string>
     <string name="btn_cancel">Cancel</string>

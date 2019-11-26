@@ -4,21 +4,32 @@ import java.util.LinkedList;
 import java.util.ListIterator;
 
 public class BookingList {
-    private LinkedList<Booking> bookings;
+    private Booking[] bookings;
 
     // Constructor
-    public BookingList(){
-        bookings = new LinkedList();
+    public BookingList(int size){
+        bookings = new Booking[size];
     }
 
     // Method to add a booking.
     public void addBooking(Booking booking){
-        bookings.addLast(booking);
+        int i = 0;
+        while (bookings[i] != null){
+            i++;
+        }
+        bookings[i] = booking;
     }
 
     // Method to remove a booking, if it's cancelled or if it's in the past.
     public void removeBooking(Booking booking){
-        bookings.remove(booking);
+        int i = 0;
+        while (bookings[i] != booking){
+            i++;
+        }
+        while (i < bookings.length && bookings[i] != null){
+            bookings[i] = bookings[i+1];
+            i++;
+        }
     }
 
     // Method to see if an idetinifier is present in the list.
@@ -40,6 +51,6 @@ public class BookingList {
     }
 
     public boolean isEmpty(){
-        return bookings.isEmpty();
+        return bookings[0] == null;
     }
 }

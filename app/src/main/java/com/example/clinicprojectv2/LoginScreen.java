@@ -140,7 +140,6 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Patient patient = dataSnapshot.getValue(Patient.class);
-                Global.setAccount(patient);
                 startNewActivityAdminOrPatient(patient);
             }
             @Override
@@ -159,7 +158,6 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Employee employee = dataSnapshot.getValue(Employee.class);
-                Global.setAccount(employee);
                 getClinicInfo(Objects.requireNonNull(employee));
                 getClinicInfo(employee);
             }
@@ -179,7 +177,6 @@ public class LoginScreen extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 Administrator admin = dataSnapshot.getValue(Administrator.class);
-                Global.setAccount(admin);
                 startNewActivityAdminOrPatient(admin);
             }
             @Override
@@ -208,8 +205,9 @@ public class LoginScreen extends AppCompatActivity {
 
     private void startNewActivityEmployee(Employee employee, Clinic clinic){
         Global.setUserType(1);
+        Global.setAccount(employee);
         Intent intent ;
-        intent = new Intent(this, EmployeeActivity.class);
+        intent = new Intent(this, WelcomeScreen.class);
         intent.putExtra("EmployeeObject", employee);
         intent.putExtra("ClinicObject", clinic);
         this.startActivity(intent);
@@ -224,6 +222,7 @@ public class LoginScreen extends AppCompatActivity {
         if(user instanceof Patient) {
             Global.setUserType(2);
             Patient patient = (Patient) user;
+            Global.setAccount(patient);
 
             intent = new Intent(this, WelcomeScreen.class);
             intent.putExtra("PatientObject", patient);
@@ -233,8 +232,9 @@ public class LoginScreen extends AppCompatActivity {
         } else if (user instanceof Administrator) {
             Global.setUserType(0);
             Administrator admin = (Administrator) user;
+            Global.setAccount(admin);
 
-            intent = new Intent(this, AdminActivity.class);
+            intent = new Intent(this, WelcomeScreen.class);
             intent.putExtra("AdminObject", admin);
             this.startActivity(intent);
         }
