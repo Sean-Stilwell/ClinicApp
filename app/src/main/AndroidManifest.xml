@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Clinic.ClinicModifyHours"></activity>
+        <activity android:name=".Clinic.ClinicModifyActivity" />
         <activity android:name=".SearchClinics" />
         <activity android:name=".CreateBooking" />
         <activity android:name=".BookingsScreen" />

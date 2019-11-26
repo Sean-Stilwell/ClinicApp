@@ -80,7 +80,6 @@ public class WorkingHoursActivity extends AppCompatActivity {
                     workday.setEndTime(LocalTime.parse(String.format("%02d", item.child("endTime").child("hour").getValue())+":"+String.format("%02d",item.child("endTime").child("minute").getValue())));
                     workday.setClosed((boolean)item.child("closed").getValue());
                     workday.setClinicId(clinicId);
-
                     workdays.add(workday);
                 }
 

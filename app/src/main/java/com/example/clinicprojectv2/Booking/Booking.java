@@ -34,7 +34,16 @@ public class Booking {
 
         // Adding the booking to the clinic / patient lists.
         patient.addBooking(this);
-        clinic.addBooking(this);
+
+
+
+        // ****************************************************
+        // To change
+
+        //clinic.addBooking(this);
+
+        // To change
+        // *********************************************************
     }
 
     // getters for instance variables

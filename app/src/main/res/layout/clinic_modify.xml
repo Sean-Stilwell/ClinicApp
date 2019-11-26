@@ -38,7 +38,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/name"
+                        android:id="@+id/clinicNameEditText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -74,18 +74,17 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/streetNumber"
+                        android:id="@+id/streetNumberEdit"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.4"
                         android:ems="10"
                         android:fontFamily="sans-serif-condensed"
                         android:hint="@string/label_street_number"
-                        android:inputType="number"
-                        android:nextFocusDown="@+id/streetName" />
+                        android:inputType="number" />
 
                     <EditText
-                        android:id="@+id/streetName"
+                        android:id="@+id/streetNameEdit"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.6"
@@ -101,7 +100,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/city"
+                        android:id="@+id/cityNameEdit"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.7"
@@ -109,15 +108,14 @@
                         android:fontFamily="sans-serif-condensed"
                         android:hint="@string/label_city"
                         android:inputType="textCapSentences"
-                        android:nextFocusDown="@+id/province" />
+                        android:nextFocusDown="@+id/provinceSpinner" />
 
                     <Spinner
-                        android:id="@+id/province"
+                        android:id="@+id/provinceSpinner"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.3"
-                        android:dropDownWidth="wrap_content"
-                        android:entries="@array/provinces" />
+                        android:dropDownWidth="wrap_content" />
                 </LinearLayout>
 
                 <TextView
@@ -134,7 +132,7 @@
                     android:orientation="horizontal">
 
                     <EditText
-                        android:id="@+id/phoneNumber"
+                        android:id="@+id/phoneNumberEdit"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
@@ -151,20 +149,13 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="@string/label_payment_methods" />
 
-                <ListView
-                    android:id="@+id/paymentMethods"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                </ListView>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <Spinner
-                        android:id="@+id/paymentMethodsSpinner"
+                        android:id="@+id/paymentMethodsAddSpinner"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.8" />
@@ -175,6 +166,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
                         android:fontFamily="sans-serif-condensed"
+                        android:onClick="clickAddPayment"
                         android:text="@string/btn_add" />
                 </LinearLayout>
 
@@ -186,23 +178,20 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="@string/label_insurance_types" />
 
-                <ListView
-                    android:id="@+id/insurances"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                </ListView>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
-                    <Spinner
-                        android:id="@+id/insurancesSpinner"
+                    <EditText
+                        android:id="@+id/insurranceEditText"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="0.8" />
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:fontFamily="sans-serif-condensed"
+                        android:hint="Insurance"
+                        android:inputType="textPersonName" />
 
                     <Button
                         android:id="@+id/btnAddInsurance"
@@ -210,6 +199,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
                         android:fontFamily="sans-serif-condensed"
+                        android:onClick="clickAddInsurance"
                         android:text="@string/btn_add" />
 
                 </LinearLayout>
@@ -222,20 +212,13 @@
                     android:fontFamily="sans-serif-condensed"
                     android:text="@string/label_services" />
 
-                <ListView
-                    android:id="@+id/linksToServices"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" >
-
-                </ListView>
-
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="horizontal">
 
                     <Spinner
-                        android:id="@+id/servicesSpinner"
+                        android:id="@+id/servicesAddSpinner"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.8" />
@@ -246,7 +229,95 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="0.2"
                         android:fontFamily="sans-serif-condensed"
+                        android:onClick="clickAddService"
                         android:text="@string/btn_add" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/label_payment_methods" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/paymentMethodsRemoveSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnRemovePaymentMethod"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:fontFamily="sans-serif-condensed"
+                        android:onClick="clickRemovePayment"
+                        android:text="Remove" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView36"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/label_insurance_types" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/removeInsurranceSpinner"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnRemoveInsurrance"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:fontFamily="sans-serif-condensed"
+                        android:onClick="clickRemoveInsurance"
+                        android:text="Remove" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textView37"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="sans-serif-condensed"
+                    android:text="@string/label_services" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/servicesSpinnerRemove"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/btnRemoveService"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.4"
+                        android:fontFamily="sans-serif-condensed"
+                        android:onClick="clickRemoveService"
+                        android:text="Remove" />
                 </LinearLayout>
 
                 <TextView
@@ -287,6 +358,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-condensed"
+                android:onClick="clickCancel"
                 android:text="@string/btn_cancel" />
 
             <Button
@@ -296,7 +368,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-condensed"
-                android:onClick="updateWorkdays"
+                android:onClick="clickSave"
                 android:text="@string/btn_save_changes" />
 
         </LinearLayout>

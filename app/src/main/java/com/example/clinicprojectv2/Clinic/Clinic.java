@@ -7,21 +7,23 @@ import com.example.clinicprojectv2.Utility;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Clinic implements Serializable {
 
+    public static final String[] PAYMENTMETHODS = {"Credit", "Cash", "Debit"};
+
     public static final String DEFAULTNAME = "Unamed";
     public static final String DEFAULTPHONE = "1111111111";
-    public static final String[] PROVINCES = {Address.NL, Address.PE,
+
+    public static final String[] PROVINCES = {  Address.NL, Address.PE,
                                                 Address.NS, Address.NB,
                                                 Address.QC, Address.ON,
                                                 Address.MB, Address.SK,
                                                 Address.AB, Address.BC,
                                                 Address.YT, Address.NT,
-                                                Address.NU};
-
-    public static final String[] ALLPAYMENTMETHODS = {"CASH","DEBIT","CREDIT"} ;
+                                                Address.NU };
 
 
     private String id;
@@ -32,7 +34,8 @@ public class Clinic implements Serializable {
     private List<String> insurances;
     private List<Service> linksToServices;
     private List<PaymentMethod> paymentMethods;
-    private BookingList bookings;
+
+    //private BookingList bookings;
 
 
     public Clinic(String id){
@@ -51,9 +54,116 @@ public class Clinic implements Serializable {
         this.insurances = new ArrayList<String>();
         this.paymentMethods = new ArrayList<PaymentMethod>();
         this.linksToServices = new ArrayList<Service>();
-        this.bookings = new BookingList();
     }
 
+
+    public static CanadianProvince provinceFromPosition(int pos){
+
+        switch(pos){
+            case 0:
+                return CanadianProvince.NL;
+            case 1:
+                return CanadianProvince.PE;
+            case 2:
+                return CanadianProvince.NS;
+            case 3:
+                return CanadianProvince.NB;
+            case 4:
+                return CanadianProvince.QC;
+            case 5:
+                return CanadianProvince.ON;
+            case 6:
+                return CanadianProvince.MB;
+            case 7:
+                return CanadianProvince.SK;
+            case 8:
+                return CanadianProvince.AB;
+            case 9:
+                return CanadianProvince.BC;
+            case 10:
+                return CanadianProvince.YT;
+            case 11:
+                return CanadianProvince.NT;
+            case 12:
+                return CanadianProvince.NU;
+            default:
+                return CanadianProvince.NU;
+        }
+    }
+
+    public static List<PaymentMethod> paymentMethsAsEnumFromStringList(List<String> pay){
+
+        List<PaymentMethod> tmp = new ArrayList<>();
+
+        for(String e :pay){
+            tmp.add(getPaymentEnumFromString(e));
+        }
+        return tmp;
+    }
+
+
+
+
+    public static PaymentMethod getPaymentEnumFromString(String payment){
+        switch (payment){
+
+            case "Credit":
+
+                return PaymentMethod.CREDIT;
+
+            case "Cash":
+                return PaymentMethod.CASH;
+
+            case "Debit":
+
+                return PaymentMethod.DEBIT;
+
+            default:
+                return PaymentMethod.CREDIT;
+        }
+    }
+
+
+    public static int positionFromProvince(String province){
+
+        switch(province){
+            case Address.NL:
+                return 0;
+            case Address.PE:
+                return 1;
+            case Address.NS:
+                return 2;
+            case Address.NB:
+                return 3;
+            case Address.QC:
+                return 4;
+            case Address.ON:
+                return 5;
+            case Address.MB:
+                return 6;
+            case Address.SK:
+                return 7;
+            case Address.AB:
+                return 8;
+            case Address.BC:
+                return 9;
+            case Address.YT:
+                return 10;
+            case Address.NT:
+                return 11;
+            case Address.NU:
+                return 12;
+            default:
+                throw new IllegalStateException("Missing something.");
+        }
+
+    }
+
+
+
+    public String getProvinceAsString(){
+        return address.getProvinceAsString();
+    }
 
     public String getName(){
         return this.name;
@@ -87,6 +197,19 @@ public class Clinic implements Serializable {
 
     public List<String> getInsurances(){
         return this.insurances;
+    }
+
+    public List<Service> getLinksToServicesAsString(){
+
+
+        ////////////////////////////
+
+        return null;
+
+
+        ////////////////////////////
+
+
     }
 
 
@@ -123,6 +246,20 @@ public class Clinic implements Serializable {
 
     public List<PaymentMethod> getPaymentMethods(){
         return this.paymentMethods;
+    }
+
+    public List<String> getPaymentMethodsAsString(){
+        List<String> tmp = new ArrayList<>();
+        for(PaymentMethod e : getPaymentMethods()){
+            if(e==PaymentMethod.CASH){
+                tmp.add(PAYMENTMETHODS[1]);
+            } else if(e==PaymentMethod.CREDIT){
+                tmp.add(PAYMENTMETHODS[0]);
+            } else {
+                tmp.add(PAYMENTMETHODS[2]);
+            }
+        }
+        return tmp;
     }
 
     public String getId(){
@@ -241,11 +378,85 @@ public class Clinic implements Serializable {
         this.getPaymentMethods().remove(newPayMet);
     }
 
-    public void addBooking(Booking booking){
-        bookings.addBooking(booking);
+
+    public void removeAllServicesAndSetTo(List<Service> newServices){
+
+        if(newServices == null){
+            throw new NullPointerException();
+        }
+        if(hasDuplicateServices(newServices)){
+            throw new IllegalArgumentException();
+        }
+
+        this.linksToServices = newServices;
     }
-    public void removeBooking(Booking booking){
-        bookings.removeBooking(booking);
+
+    private static boolean hasDuplicateServices(List<Service> services){
+
+        for (Service e: services) {
+            int count = Collections.frequency(services, e);
+
+            if(count>1){
+                return true;
+            }
+        }
+        return false;
     }
+
+
+    public void removeAllPaymentMetAndSetTo(List<PaymentMethod> payMets){
+
+        if(payMets == null){
+            throw new NullPointerException();
+        }
+        if(hasDuplicatePayMets(payMets)){
+            throw new IllegalArgumentException();
+        }
+        this.paymentMethods = payMets;
+    }
+
+    private static boolean hasDuplicatePayMets(List<PaymentMethod> payMets){
+
+        for (PaymentMethod e: payMets) {
+            int count = Collections.frequency(payMets, e);
+
+            if(count>1){
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public void removeInsurancesAndSetTo(List<String> insurances){
+
+        if(insurances == null){
+            throw new NullPointerException();
+        }
+        if(hasDuplicateInsurances(insurances)){
+            throw new IllegalArgumentException();
+        }
+        this.insurances = insurances;
+    }
+
+
+    private static boolean hasDuplicateInsurances(List<String> insurances){
+        for (String e: insurances) {
+            int count = Collections.frequency(insurances, e);
+
+            if(count>1){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    //    public void addBooking(Booking booking){
+    //        bookings.addBooking(booking);
+    //    }
+
+    //    public void removeBooking(Booking booking){
+    //        bookings.removeBooking(booking);
+    //    }
 }
 
