@@ -32,7 +32,7 @@ public class Clinic implements Serializable {
     private List<String> insurances;
     private List<Service> linksToServices;
     private List<PaymentMethod> paymentMethods;
-    private BookingList bookings;
+    //private BookingList bookings;
 
 
     public Clinic(String id){
@@ -51,7 +51,7 @@ public class Clinic implements Serializable {
         this.insurances = new ArrayList<String>();
         this.paymentMethods = new ArrayList<PaymentMethod>();
         this.linksToServices = new ArrayList<Service>();
-        this.bookings = new BookingList();
+        //this.bookings = new BookingList();
     }
 
 
@@ -242,11 +242,11 @@ public class Clinic implements Serializable {
         this.getPaymentMethods().remove(newPayMet);
     }
 
-    public void addBooking(Booking booking){
-        bookings.addBooking(booking);
-    }
-    public void removeBooking(Booking booking){
-        bookings.removeBooking(booking);
-    }
+//    public void addBooking(Booking booking){
+//        bookings.addBooking(booking);
+//    }
+//    public void removeBooking(Booking booking){
+//        bookings.removeBooking(booking);
+//    }
 }
 
