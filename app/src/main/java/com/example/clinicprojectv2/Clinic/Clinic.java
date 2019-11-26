@@ -82,7 +82,6 @@ public class Clinic implements Serializable {
     }
 
     public List<String> getInsurances(){
-
         return this.insurances;
     }
 
