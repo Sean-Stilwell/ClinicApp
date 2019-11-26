@@ -207,7 +207,7 @@ public class LoginScreen extends AppCompatActivity {
         Global.setUserType(1);
         Global.setAccount(employee);
         Intent intent ;
-        intent = new Intent(this, EmployeeActivity.class);
+        intent = new Intent(this, WelcomeScreen.class);
         intent.putExtra("EmployeeObject", employee);
         intent.putExtra("ClinicObject", clinic);
         this.startActivity(intent);
@@ -234,7 +234,7 @@ public class LoginScreen extends AppCompatActivity {
             Administrator admin = (Administrator) user;
             Global.setAccount(admin);
 
-            intent = new Intent(this, AdminActivity.class);
+            intent = new Intent(this, WelcomeScreen.class);
             intent.putExtra("AdminObject", admin);
             this.startActivity(intent);
         }

@@ -8,6 +8,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.clinicprojectv2.Administrator.AdminMainActivities.AdminActivity;
+import com.example.clinicprojectv2.Administrator.Administrator;
+import com.example.clinicprojectv2.Employee.Employee;
+import com.example.clinicprojectv2.Employee.EmployeeActivity;
+
 public class WelcomeScreen extends AppCompatActivity {
 
     @Override
@@ -17,7 +22,7 @@ public class WelcomeScreen extends AppCompatActivity {
 
         // Set the text for the user.
         TextView text = (TextView) findViewById(R.id.textWelcome);
-        text.setText("Bonjour, " + Global.getSavedAccount().getFirstName() + ". Vous êtes connectés en tant que " + Global.getUserRole() +".");
+        text.setText("Welcome, " + Global.getSavedAccount().getFirstName() + ". You are connected as a " + Global.getUserRole() +".");
 
         // Change button visibility if the user is not an admin.
         if (Global.getUserRole() != "Administrator"){
@@ -39,10 +44,16 @@ public class WelcomeScreen extends AppCompatActivity {
     }
 
     public void startAdmin(View view){
-
+        Intent intent = new Intent(this, AdminActivity.class);
+        intent.putExtra("AdminObject", (Administrator)Global.getSavedAccount());
+        this.startActivity(intent);
     }
     public void startEmployee(View view){
-
+        Intent intent ;
+        intent = new Intent(this, EmployeeActivity.class);
+        intent.putExtra("EmployeeObject", (Employee)Global.getSavedAccount());
+        //intent.putExtra("ClinicObject", Global.getSavedClinic());
+        this.startActivity(intent);
     }
     public void openSearch(View view){
         /*Clicking this button would open the search screen, from which the user can create bookings at the clinics they search*/
