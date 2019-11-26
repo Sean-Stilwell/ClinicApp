@@ -43,7 +43,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:text="Créer un compte"
+                        android:text="@string/title_create_account"
                         android:textColor="#FFFFFF"
                         android:textSize="24sp" />
 
@@ -54,7 +54,7 @@
                         android:layout_marginBottom="20dp"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:text="Remplissez les informations suivantes pour s'inscrire."
+                        android:text="@string/label_create_account_instr"
                         android:textColor="#FFFFFF"
                         android:textSize="18sp" />
 
@@ -69,7 +69,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:text="Type de compte:"
+                            android:text="@string/label_account_type"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp" />
 
@@ -82,7 +82,7 @@
                                 android:id="@+id/radioButton2"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="Patient"
+                                android:text="@string/label_patient"
                                 android:textColor="#FFFFFF"
                                 android:textColorHint="#FFFFFF"
                                 android:textSize="18sp"
@@ -92,7 +92,7 @@
                                 android:id="@+id/radioButton3"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Employé"
+                                android:text="@string/label_employee"
                                 android:textColor="#FFFFFF"
                                 android:textColorHint="#FFFFFF"
                                 android:textSize="18sp" />
@@ -111,7 +111,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:text="Prénom:"
+                            android:text="@string/label_first_name"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp" />
 
@@ -130,8 +130,7 @@
                             android:scrollHorizontally="false"
                             android:singleLine="true"
                             android:textColor="#FFFFFF"
-                            android:textStyle="italic"
-                            tools:text="Prénom" />
+                            android:textStyle="italic" />
 
                     </LinearLayout>
 
@@ -146,7 +145,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:text="Nom de famille:"
+                            android:text="@string/label_last_name"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp" />
 
@@ -165,8 +164,7 @@
                             android:scrollHorizontally="false"
                             android:singleLine="true"
                             android:textColor="#FFFFFF"
-                            android:textStyle="italic"
-                            tools:text="Nom de famille" />
+                            android:textStyle="italic" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -180,7 +178,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:text="Mot de passe:"
+                            android:text="@string/label_password"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp" />
 
@@ -199,8 +197,7 @@
                             android:scrollHorizontally="false"
                             android:singleLine="true"
                             android:textColor="#FFFFFF"
-                            android:textStyle="italic"
-                            tools:text="Mot de passe" />
+                            android:textStyle="italic" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -214,7 +211,7 @@
                             android:layout_height="match_parent"
                             android:layout_weight="1"
                             android:gravity="center_vertical"
-                            android:text="Courriel:"
+                            android:text="@string/label_email"
                             android:textColor="#FFFFFF"
                             android:textSize="18sp" />
 
@@ -233,8 +230,7 @@
                             android:scrollHorizontally="false"
                             android:singleLine="true"
                             android:textColor="#FFFFFF"
-                            android:textStyle="italic"
-                            tools:text="Courriel" />
+                            android:textStyle="italic" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -251,7 +247,7 @@
                         android:width="300dp"
                         android:height="60dp"
                         android:onClick="signUpClick"
-                        android:text="Compléter l'inscription" />
+                        android:text="@string/btn_create_account" />
 
                     <TextView
                         android:id="@+id/textError"
