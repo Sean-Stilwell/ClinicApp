@@ -86,6 +86,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="06:00"
                             android:textAlignment="center" />
 
                         <TextView
@@ -106,6 +107,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="21:00"
                             android:textAlignment="center" />
                     </LinearLayout>
 
@@ -168,6 +170,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="06:00"
                             android:textAlignment="center" />
 
                         <TextView
@@ -188,6 +191,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="21:00"
                             android:textAlignment="center" />
                     </LinearLayout>
 
@@ -248,6 +252,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="06:00"
                             android:textAlignment="center" />
 
                         <TextView
@@ -268,6 +273,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="21:00"
                             android:textAlignment="center" />
                     </LinearLayout>
 
@@ -330,6 +336,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="06:00"
                             android:textAlignment="center" />
 
                         <TextView
@@ -350,6 +357,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="21:00"
                             android:textAlignment="center" />
                     </LinearLayout>
 
@@ -410,6 +418,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="06:00"
                             android:textAlignment="center" />
 
                         <TextView
@@ -430,6 +439,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="21:00"
                             android:textAlignment="center" />
                     </LinearLayout>
 
@@ -492,6 +502,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="06:00"
                             android:textAlignment="center" />
 
                         <TextView
@@ -512,6 +523,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="21:00"
                             android:textAlignment="center" />
                     </LinearLayout>
 
@@ -572,6 +584,7 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
+                            android:text="06:00"
                             android:textAlignment="center" />
 
                         <TextView
@@ -592,7 +605,8 @@
                             android:fontFamily="sans-serif-condensed"
                             android:inputType="time"
                             android:onClick="showTimePickerDialog"
-                            android:textAlignment="center" />
+                            android:textAlignment="center"
+                            android:text="21:00" />
                     </LinearLayout>
 
                 </LinearLayout>
