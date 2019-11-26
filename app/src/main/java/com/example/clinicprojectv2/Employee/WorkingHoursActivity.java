@@ -36,7 +36,6 @@ public class WorkingHoursActivity extends AppCompatActivity {
     private int[] workdayFromFields;
     private int[] workdayToFields;
     private int[] workdayClosedCheckboxes;
-
     private boolean dbReadDone;
 
     DatabaseReference db;
@@ -96,6 +95,8 @@ public class WorkingHoursActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     public void updateWorkdays(View view) {
 

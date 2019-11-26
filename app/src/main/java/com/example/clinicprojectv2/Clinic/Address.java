@@ -122,14 +122,14 @@ public class Address implements Serializable {
 
     public void setProvince(CanadianProvince province){
         if(province==null){
-            throw new IllegalArgumentException("No good.");
+            throw new IllegalArgumentException("No good province.");
         }
         this.province = province;
     }
 
     public void setCity(String city){
         if(!Utility.isValidAddress(city)){
-            throw new IllegalArgumentException("No good.");
+            throw new IllegalArgumentException("No good city.");
         }
         this.city = city;
     }
@@ -142,7 +142,7 @@ public class Address implements Serializable {
     public void setStreetName(String newName){
 
         if(!Utility.isValidAddress(newName)){
-            throw new IllegalArgumentException("No good.");
+            throw new IllegalArgumentException("No good street name.");
         }
         this.streetName = newName;
     }

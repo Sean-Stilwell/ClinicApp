@@ -126,6 +126,8 @@ public class EmployeeActivity extends AppCompatActivity {
         linkUiFields();
 
         setUpProvinceSpinner();
+
+        setUpListenerForClinicModel();
     }
 
     private void setUpProvinceSpinner(){
@@ -159,10 +161,6 @@ public class EmployeeActivity extends AppCompatActivity {
         insurranceEditText = findViewById(R.id.insurranceEditText);
     }
 
-
-
-
-
     @Override
     public void onStart() {
         super.onStart();
@@ -172,7 +170,7 @@ public class EmployeeActivity extends AppCompatActivity {
             //this.finish();
         }
 
-        setUpListenerForClinicModel();
+        //setUpListenerForClinicModel();
     }
 
     private void setUpListenerForClinicModel(){
@@ -501,7 +499,7 @@ public class EmployeeActivity extends AppCompatActivity {
 
             } catch (Exception e) {
 
-                displayToast("Some inputs are Invalid.");
+                displayToast(e.getMessage());
 
             }
         }
