@@ -1,5 +1,7 @@
 package com.example.clinicprojectv2.Clinic;
 
+import com.example.clinicprojectv2.Booking.Booking;
+import com.example.clinicprojectv2.Booking.BookingList;
 import com.example.clinicprojectv2.Service.Service;
 import com.example.clinicprojectv2.Utility;
 
@@ -30,6 +32,7 @@ public class Clinic implements Serializable {
     private List<String> insurances;
     private List<Service> linksToServices;
     private List<PaymentMethod> paymentMethods;
+    private BookingList bookings;
 
 
     public Clinic(String id){
@@ -48,6 +51,7 @@ public class Clinic implements Serializable {
         this.insurances = new ArrayList<String>();
         this.paymentMethods = new ArrayList<PaymentMethod>();
         this.linksToServices = new ArrayList<Service>();
+        this.bookings = new BookingList();
     }
 
 
@@ -235,6 +239,13 @@ public class Clinic implements Serializable {
             throw new IllegalStateException();
         }
         this.getPaymentMethods().remove(newPayMet);
+    }
+
+    public void addBooking(Booking booking){
+        bookings.addBooking(booking);
+    }
+    public void removeBooking(Booking booking){
+        bookings.removeBooking(booking);
     }
 }
 

@@ -3,6 +3,7 @@ package com.example.clinicprojectv2.Booking;
 import com.example.clinicprojectv2.Clinic.Clinic;
 import com.example.clinicprojectv2.Clinic.Time;
 import com.example.clinicprojectv2.Employee.Employee;
+import com.example.clinicprojectv2.Patient.Patient;
 import com.example.clinicprojectv2.Service.Service;
 
 public class Booking {
@@ -11,8 +12,11 @@ public class Booking {
     private Employee bookedEmployee;
     private Time startTime;
     private Time endTime;
+    private String identifierString;
+    private int identifier;
+    private String date;
 
-    public Booking(Clinic clinic, Service service, Employee employee, Time time){
+    public Booking(Clinic clinic, Service service, Employee employee, Patient patient, Time time, int year, int month, int day){
         // Verifying that no null parameters were given.
         if (clinic == null || service == null || employee == null || time == null){
             throw new NullPointerException();
@@ -24,6 +28,13 @@ public class Booking {
         bookedEmployee = employee;
         startTime = time;
         setEndTime();
+        identifierString = Integer.toString(year) + Integer.toString(month) + Integer.toString(day) + time.toString();
+        date = Integer.toString(day) + "/" + Integer.toString(month) + "/" + Integer.toString(year);
+        identifier = Integer.parseInt(identifierString);
+
+        // Adding the booking to the clinic / patient lists.
+        patient.addBooking(this);
+        clinic.addBooking(this);
     }
 
     // getters for instance variables
@@ -41,6 +52,16 @@ public class Booking {
     }
     public Time getEndTime(){
         return this.endTime;
+    }
+    public int getIdentifier(){return this.identifier;}
+    public String getDate(){return this.date;}
+
+    //To string method for displaying a booking
+    public String toString(){
+        String returnString = bookedService.getName() + " - " + bookedService.getId() +
+                "\n scheduled for " + getDate() + " at " + Integer.toString(getStartTime().getHour())
+                +"h"+Integer.toString(getStartTime().getMinute());
+        return returnString;
     }
 
     //setters for instance variables - allows a booking to be modified
