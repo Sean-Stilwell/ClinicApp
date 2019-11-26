@@ -15,10 +15,13 @@ import com.example.clinicprojectv2.Employee.EmployeeActivity;
 
 public class WelcomeScreen extends AppCompatActivity {
 
+    private String clinicID;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome_screen);
+
 
         // Set the text for the user.
         TextView text = (TextView) findViewById(R.id.textWelcome);
@@ -31,6 +34,7 @@ public class WelcomeScreen extends AppCompatActivity {
         }
         // Change button visibility if the user is not an employee.
         if (Global.getUserRole() != "Employee"){
+
             Button employeeButton = (Button) findViewById(R.id.button11);
             employeeButton.setVisibility(View.GONE);
         }
@@ -49,9 +53,11 @@ public class WelcomeScreen extends AppCompatActivity {
         this.startActivity(intent);
     }
     public void startEmployee(View view){
+        clinicID = getIntent().getStringExtra("CLINICID");
         Intent intent ;
         intent = new Intent(this, EmployeeActivity.class);
-        intent.putExtra("EmployeeObject", (Employee)Global.getSavedAccount());
+        //intent.putExtra("EmployeeObject", (Employee)Global.getSavedAccount());
+        intent.putExtra("CLINICID", clinicID);
         //intent.putExtra("ClinicObject", Global.getSavedClinic());
         this.startActivity(intent);
     }

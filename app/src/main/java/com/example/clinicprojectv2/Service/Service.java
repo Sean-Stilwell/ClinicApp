@@ -1,8 +1,10 @@
 package com.example.clinicprojectv2.Service;
 import com.example.clinicprojectv2.Utility;
 
+import java.io.Serializable;
 
-public class Service {
+
+public class Service implements Serializable {
 
     public static final String NURSE = "Nurse";
     public static final String DOCTOR = "Doctor";

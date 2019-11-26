@@ -336,6 +336,7 @@
                     android:layout_marginTop="5dp"
                     android:layout_marginBottom="10dp"
                     android:fontFamily="sans-serif-condensed"
+                    android:onClick="clickHours"
                     android:text="@string/label_modify_hours" />
 
             </LinearLayout>

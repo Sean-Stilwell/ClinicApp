@@ -210,6 +210,7 @@ public class LoginScreen extends AppCompatActivity {
         intent = new Intent(this, WelcomeScreen.class);
         intent.putExtra("EmployeeObject", employee);
         intent.putExtra("ClinicObject", clinic);
+        intent.putExtra("CLINICID", clinic.getId());
         this.startActivity(intent);
     }
 

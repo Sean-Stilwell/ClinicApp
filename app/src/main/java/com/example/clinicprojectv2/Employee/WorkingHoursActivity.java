@@ -54,8 +54,8 @@ public class WorkingHoursActivity extends AppCompatActivity {
         workdayClosedCheckboxes = new int[] { R.id.isMondayClosed, R.id.isTuesdayClosed, R.id.isWednesdayClosed, R.id.isThursdayClosed, R.id.isFridayClosed, R.id.isSaturdayClosed, R.id.isSundayClosed};
 
         db = FirebaseDatabase.getInstance().getReference();
-        clinicId = "012xabc"; // TEST ONLY
-        //clinicId = getIntent().getStringExtra("CLINIC_ID");
+
+        clinicId = getIntent().getStringExtra("CLINIC_ID");
 
         setUpListenersForWorkdays();
     }
@@ -136,6 +136,8 @@ public class WorkingHoursActivity extends AppCompatActivity {
             }
 
             displayToast("Changes saved.");
+
+            this.finish();
 
         } catch (IllegalArgumentException e) {
             displayToast(e.getMessage());
@@ -254,5 +256,9 @@ public class WorkingHoursActivity extends AppCompatActivity {
 
     private void displayToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+    }
+
+    public void clickCancel(View view){
+        this.finish();
     }
 }

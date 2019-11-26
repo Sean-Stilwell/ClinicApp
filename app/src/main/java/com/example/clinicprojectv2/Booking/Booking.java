@@ -33,8 +33,8 @@ public class Booking {
         identifier = Integer.parseInt(identifierString);
 
         // Adding the booking to the clinic / patient lists.
-<<<<<<< HEAD
-        patient.addBooking(this);
+
+        //patient.addBooking(this);
 
 
 
@@ -45,10 +45,7 @@ public class Booking {
 
         // To change
         // *********************************************************
-=======
-//        patient.addBooking(this);
-//        clinic.addBooking(this);
->>>>>>> ef290fe6de073b903b90a06a78a0eff855760a72
+
     }
 
     // getters for instance variables

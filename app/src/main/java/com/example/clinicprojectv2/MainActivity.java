@@ -57,13 +57,13 @@ public class MainActivity extends AppCompatActivity {
     /** Called when the user clicks the Se Connecter button */
     public void openLoginPage(View view) {
 
-        Intent intent ;
-        intent = new Intent(this, EmployeeActivity.class);
-        intent.putExtra("CLINICID", "OSusqciGBOTRkFOkpTgfEfTS2tb2");
+//        Intent intent ;
+//        intent = new Intent(this, EmployeeActivity.class);
+//        intent.putExtra("CLINICID", "OSusqciGBOTRkFOkpTgfEfTS2tb2");
+//
+//        this.startActivity(intent);
 
-        this.startActivity(intent);
-
-        //startActivity(new Intent(MainActivity.this, EmployeeActivity.class));
+        startActivity(new Intent(MainActivity.this, LoginScreen.class));
     }
 
     public void openRatePage(View view) {

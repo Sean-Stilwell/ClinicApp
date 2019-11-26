@@ -8,7 +8,7 @@ import android.text.TextUtils;
 import android.view.Display;
 import android.view.View;
 import android.os.Bundle;
-
+import android.content.Intent;
 import com.example.clinicprojectv2.Clinic.CanadianProvince;
 import com.example.clinicprojectv2.Clinic.Clinic;
 
@@ -16,6 +16,7 @@ import com.example.clinicprojectv2.Clinic.Clinic;
 import com.example.clinicprojectv2.Clinic.PaymentMethod;
 import com.example.clinicprojectv2.R;
 import com.example.clinicprojectv2.Service.Service;
+import com.example.clinicprojectv2.WelcomeScreen;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.DataSnapshot;
@@ -105,6 +106,10 @@ public class EmployeeActivity extends AppCompatActivity {
 
         clinicID = getIntent().getStringExtra("CLINICID");
 
+        //if(clinicID==null){
+        //    this.finish();
+        //}
+
         allPaymentMethods = new ArrayList<>();
         allPaymentMethods.add(Clinic.PAYMENTMETHODS[0]);
         allPaymentMethods.add(Clinic.PAYMENTMETHODS[1]);
@@ -161,6 +166,11 @@ public class EmployeeActivity extends AppCompatActivity {
     @Override
     public void onStart() {
         super.onStart();
+
+        if(clinicID==null){
+            displayToast("Something wrong.");
+            //this.finish();
+        }
 
         setUpListenerForClinicModel();
     }
@@ -514,6 +524,14 @@ public class EmployeeActivity extends AppCompatActivity {
 
     public void clickCancel(View view){
         this.finish();
+    }
+
+    public void clickHours(View view){
+
+        Intent intent = new Intent(this, WorkingHoursActivity.class);
+        intent.putExtra("CLINIC_ID", clinicID);
+        this.startActivity(intent);
+
     }
 
 }
