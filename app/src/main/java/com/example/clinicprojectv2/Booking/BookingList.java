@@ -46,7 +46,9 @@ public class BookingList implements Serializable {
     public String getList(){
         String returnString = "";
         for (Booking b : bookings){
-            returnString = returnString + b.toString();
+            if (b != null) {
+                returnString = returnString + b.toString();
+            }
         }
         return returnString;
     }

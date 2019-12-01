@@ -18,19 +18,18 @@ public class Booking implements Serializable {
     private int identifier;
     private String date;
 
-    public Booking(Clinic clinic, Service service, Employee employee, Patient patient, Time time, int year, int month, int day){
+    public Booking(Clinic clinic, Service service, Patient patient, Time time, int year, int month, int day){
         // Verifying that no null parameters were given.
-        if (clinic == null || service == null || employee == null || time == null){
+        if (clinic == null || service == null || time == null){
             throw new NullPointerException();
         }
 
         // Setting the instance variables accordingly.
         bookedClinic = clinic;
         bookedService = service;
-        bookedEmployee = employee;
         startTime = time;
         setEndTime();
-        identifierString = Integer.toString(year) + Integer.toString(month) + Integer.toString(day) + time.toString();
+        identifierString = Integer.toString(month) + Integer.toString(day) + Integer.toString(time.getHour()) + Integer.toString(time.getMinute());
         date = Integer.toString(day) + "/" + Integer.toString(month) + "/" + Integer.toString(year);
         identifier = Integer.parseInt(identifierString);
 

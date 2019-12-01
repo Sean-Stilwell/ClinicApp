@@ -61,9 +61,9 @@ public class WelcomeScreen extends AppCompatActivity {
         //intent.putExtra("ClinicObject", Global.getSavedClinic());
         this.startActivity(intent);
     }
-    public void openSearch(View view){
+    public void createBooking(View view){
         /*Clicking this button would open the search screen, from which the user can create bookings at the clinics they search*/
-        startActivity(new Intent(WelcomeScreen.this, SearchClinics.class));
+        startActivity(new Intent(WelcomeScreen.this, CreateBooking.class));
     }
     public void viewBookings(View view){
         startActivity(new Intent(WelcomeScreen.this, BookingsScreen.class));
