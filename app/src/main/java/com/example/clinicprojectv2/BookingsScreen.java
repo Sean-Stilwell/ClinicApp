@@ -14,11 +14,11 @@ public class BookingsScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookings_screen);
         TextView upcoming = (TextView) findViewById(R.id.textView19);
-//        if (!Global.getPatient().getBookings().isEmpty()){
-//            upcoming.setText(Global.getPatient().getBookings().getList());
-//        }
-//        else{
-//            upcoming.setText("No bookings made!");
-//        }
+        if (!Global.getPatient().getBookings().isEmpty()){
+            upcoming.setText(Global.getPatient().getBookings().getList());
+        }
+        else{
+            upcoming.setText("No bookings made!");
+        }
     }
 }

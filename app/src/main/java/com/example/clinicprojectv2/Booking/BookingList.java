@@ -1,9 +1,10 @@
 package com.example.clinicprojectv2.Booking;
 
+import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.ListIterator;
 
-public class BookingList {
+public class BookingList implements Serializable {
     private Booking[] bookings;
 
     // Constructor
@@ -48,6 +49,14 @@ public class BookingList {
             returnString = returnString + b.toString();
         }
         return returnString;
+    }
+
+    public int getSize(){
+        int i = 1;
+        while (bookings[i] != null){
+            i++;
+        }
+        return i;
     }
 
     public boolean isEmpty(){

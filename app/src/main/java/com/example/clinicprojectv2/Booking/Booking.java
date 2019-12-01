@@ -6,7 +6,9 @@ import com.example.clinicprojectv2.Employee.Employee;
 import com.example.clinicprojectv2.Patient.Patient;
 import com.example.clinicprojectv2.Service.Service;
 
-public class Booking {
+import java.io.Serializable;
+
+public class Booking implements Serializable {
     private Clinic bookedClinic;
     private Service bookedService;
     private Employee bookedEmployee;
@@ -32,20 +34,10 @@ public class Booking {
         date = Integer.toString(day) + "/" + Integer.toString(month) + "/" + Integer.toString(year);
         identifier = Integer.parseInt(identifierString);
 
-        // Adding the booking to the clinic / patient lists.
+         //Adding the booking to the clinic / patient lists.
 
-        //patient.addBooking(this);
-
-
-
-        // ****************************************************
-        // To change
-
-        //clinic.addBooking(this);
-
-        // To change
-        // *********************************************************
-
+        patient.addBooking(this);
+        clinic.addBooking(this);
     }
 
     // getters for instance variables
@@ -71,7 +63,7 @@ public class Booking {
     public String toString(){
         String returnString = bookedService.getName() + " - " + bookedService.getId() +
                 "\n scheduled for " + getDate() + " at " + Integer.toString(getStartTime().getHour())
-                +"h"+Integer.toString(getStartTime().getMinute());
+                +"h"+Integer.toString(getStartTime().getMinute()) + "\n \n";
         return returnString;
     }
 

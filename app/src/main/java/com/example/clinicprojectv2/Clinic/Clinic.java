@@ -36,8 +36,9 @@ public class Clinic implements Serializable {
     private List<PaymentMethod> paymentMethods;
 
 
-
-    //private BookingList bookings;
+    private final int MAXBOOKINGS = 100;
+    private BookingList bookings;
+    private int waitingTime;
 
 
     public Clinic(String id){
@@ -57,7 +58,7 @@ public class Clinic implements Serializable {
         this.paymentMethods = new ArrayList<PaymentMethod>();
         this.linksToServices = new ArrayList<Service>();
 
-        //this.bookings = new BookingList();
+        this.bookings = new BookingList(MAXBOOKINGS);
 
     }
 
@@ -457,20 +458,17 @@ public class Clinic implements Serializable {
         return false;
     }
 
-    //    public void addBooking(Booking booking){
-    //        bookings.addBooking(booking);
-    //    }
+        public void addBooking(Booking booking){
+            bookings.addBooking(booking);
+        }
 
-    //    public void removeBooking(Booking booking){
-    //        bookings.removeBooking(booking);
-    //    }
+        public void removeBooking(Booking booking){
+            bookings.removeBooking(booking);
+        }
 
-//    public void addBooking(Booking booking){
-//        bookings.addBooking(booking);
-//    }
-//    public void removeBooking(Booking booking){
-//        bookings.removeBooking(booking);
-//    }
-
+        // returns time in minutes.
+        public int getWaitTime(){
+            return bookings.getSize()*15;
+        }
 }
 
