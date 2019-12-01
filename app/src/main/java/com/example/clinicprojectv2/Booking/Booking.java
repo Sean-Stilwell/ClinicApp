@@ -18,6 +18,16 @@ public class Booking implements Serializable {
     private int identifier;
     private String date;
 
+    /**
+     * Constructor method that initializes the booking and associates it with a clinic.
+     * @param clinic - the clinic to be associated with the booking
+     * @param service - the service that the booking will use.
+     * @param patient - the patient making the booking
+     * @param time - time of day for the booking
+     * @param year - year of booking (may be set to 2019 by default)
+     * @param month - month of booking
+     * @param day - day of booking.
+     */
     public Booking(Clinic clinic, Service service, Patient patient, Time time, int year, int month, int day){
         // Verifying that no null parameters were given.
         if (clinic == null || service == null || time == null){
@@ -40,25 +50,20 @@ public class Booking implements Serializable {
     }
 
     // getters for instance variables
-    public Clinic getBookedClinic(){
-        return this.bookedClinic;
-    }
-    public Service getBookedService(){
-        return this.bookedService;
-    }
-    public Employee getBookedEmployee(){
-        return this.bookedEmployee;
-    }
-    public Time getStartTime(){
-        return this.startTime;
-    }
-    public Time getEndTime(){
-        return this.endTime;
-    }
+    public Clinic getBookedClinic(){ return this.bookedClinic; }
+    public Service getBookedService(){ return this.bookedService; }
+    public Employee getBookedEmployee(){ return this.bookedEmployee; }
+    public Time getStartTime(){ return this.startTime; }
+    public Time getEndTime(){ return this.endTime; }
     public int getIdentifier(){return this.identifier;}
     public String getDate(){return this.date;}
 
-    //To string method for displaying a booking
+    /**
+     * To string method. Used to create a list of bookings on the view
+     * bookings screen. Uses relevant information to understand the
+     * booking easily
+     * @return the string representation of the booking
+     */
     public String toString(){
         String returnString = bookedService.getName() + " - " + bookedService.getId() +
                 "\n scheduled for " + getDate() + " at " + Integer.toString(getStartTime().getHour())
