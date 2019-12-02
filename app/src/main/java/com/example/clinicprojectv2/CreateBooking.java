@@ -38,8 +38,6 @@ public class CreateBooking extends AppCompatActivity {
         if (clinic != null && service != null && year != 0 && month != 0 && day != 0 && hour != -1 && minute != -1){
             Time time = new Time(hour,minute);
             Booking newBooking = new Booking(clinic,service,Global.getPatient(),time,year,month,day);
-            clinic.addBooking(newBooking);
-            Global.getPatient().addBooking(newBooking);
         }
         else{
             TextView error = findViewById(R.id.textViewError);
@@ -54,21 +52,25 @@ public class CreateBooking extends AppCompatActivity {
     public Clinic findClinic(){
         EditText clinicName = findViewById(R.id.editText);
         String clinic = clinicName.getText().toString();
-        // This function should search for the clinic in firebase.
-        return null;
+        // This function should retrieve the clinic in firebase.
+        Clinic returnClinic = new Clinic(); // For testing, remove when firebase functionality added.
+        returnClinic.setName(clinic); // For testing, remove when firebase functionality added.
+        return returnClinic;
     }
 
     /**
      * Method to get the service that the user wants. Ensures the service
      * is available at a clinic
-     * @param Clinic - the clinic desired
+     * @param clinic - the clinic desired
      * @return Service - the service desired
      * */
     public Service findService(Clinic clinic){
         EditText serviceName = findViewById(R.id.editText6);
         String service = serviceName.getText().toString();
         // This function should return the service.
-        return null;
+        Service returnService = new Service(); // For testing, remove when firebase functionality added.
+        returnService.setName("Sample Service"); // For testing, remove when firebase functionality added.
+        return returnService;
     }
 
     /**

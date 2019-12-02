@@ -65,7 +65,7 @@ public class Booking implements Serializable {
      * @return the string representation of the booking
      */
     public String toString(){
-        String returnString = bookedService.getName() + " - " + bookedService.getId() +
+        String returnString = bookedService.getName() + " - " + bookedClinic.getName() +
                 "\n scheduled for " + getDate() + " at " + Integer.toString(getStartTime().getHour())
                 +"h"+Integer.toString(getStartTime().getMinute()) + "\n \n";
         return returnString;

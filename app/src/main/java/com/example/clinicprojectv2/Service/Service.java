@@ -56,6 +56,8 @@ public class Service implements Serializable {
         return this.id;
     }
 
+    public void setName(String name){this.name = name;}
+
     public boolean serviceInfoIsValid(String name, ServicePerformer servicePerformer, String id){
         if(name == null || servicePerformer == null || id == null){
             return false;
