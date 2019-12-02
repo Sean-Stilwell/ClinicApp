@@ -1,5 +1,5 @@
 # SEG2505 - Projet Final - Livrable 4
-Mercredi, le 4 décembre, 2019
+Mardi, le 3 décembre, 2019
 
 Ce répertoire contient nos fichiers pour le projet final de SEG2505 en automne, 2019.
 

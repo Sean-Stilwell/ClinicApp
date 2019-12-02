@@ -69,7 +69,7 @@ public class CreateBooking extends AppCompatActivity {
         String service = serviceName.getText().toString();
         // This function should return the service.
         Service returnService = new Service(); // For testing, remove when firebase functionality added.
-        returnService.setName("Sample Service"); // For testing, remove when firebase functionality added.
+        returnService.setName(service); // For testing, remove when firebase functionality added.
         return returnService;
     }
 
