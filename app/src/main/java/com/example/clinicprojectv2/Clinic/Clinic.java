@@ -281,9 +281,9 @@ public class Clinic implements Serializable {
     }
 
     public void setName(String name){
-        if(!Utility.isValidName(name)){
-            throw new IllegalArgumentException();
-        }
+//        if(!Utility.isValidName(name)){
+//            throw new IllegalArgumentException();
+//        }
         this.name = name;
     }
 
