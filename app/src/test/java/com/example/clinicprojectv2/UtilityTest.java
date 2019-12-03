@@ -43,9 +43,9 @@ public class UtilityTest {
     @Test
     public void isValidAddress() {
         // Only a few formats are accepted
-        assertTrue("A valid address was rejected.", Utility.isValidAddress("100 Laurier Avenue"));
-        assertTrue("A valid address was rejected.", Utility.isValidAddress("100 Laurier Avenue East"));
-        assertTrue("A valid address was rejected.", Utility.isValidAddress("500 Laurier Street"));
+        assertTrue("A valid address street name was rejected", Utility.isValidAddress("Laurier"));
+        assertTrue("A valid address street name was rejected", Utility.isValidAddress("Avenue"));
+        assertTrue("A valid address street name was rejected", Utility.isValidAddress("Street"));
 
         // Other formats are rejected
         assertFalse("An invalid address was accepted.", Utility.isValidAddress("500 Laurier Street 75"));
