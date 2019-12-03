@@ -11,7 +11,7 @@ public class ServiceTest {
         // This method ensures names are set properly in a new service for each kind of service performer.
 
         // For a doctor
-        Service testService = new Service("doctor", ServicePerformer.DOCTOR, "9876");
+        Service testService = new Service("Doctor", ServicePerformer.DOCTOR, "9876");
         assertEquals("Service name not properly set.", "doctor", testService.getName());
 
         // For a nurse
@@ -82,9 +82,13 @@ public class ServiceTest {
            in multiple different scenarios. */
 
         // With 3 null parameters; in this case, seeks asserts for false
-        /*Service testService = new Service(null, null, null);
-        boolean test1Success = testService.serviceInfoIsValid(testService.getName(), testService.getServicePerformer(), testService.getId());
-        assertFalse("ServiceInfoIsValid did not recognize a null parameter.", test1Success);
+        try {
+            Service testService = new Service(null, null, null);
+            boolean test1Success = testService.serviceInfoIsValid(testService.getName(), testService.getServicePerformer(), testService.getId());
+            assertFalse("ServiceInfoIsValid did not recognize a null parameter.", test1Success);
+        } catch (Exception e) {
+            System.out.println("null parameter caught");
+        }
 
         // If service name is null; in this case, seeks asserts for false
         Service nameIsNull = new Service(null, ServicePerformer.DOCTOR, "9876");
@@ -99,7 +103,7 @@ public class ServiceTest {
         // If service id is null; in this case, seeks asserts for false
         Service idIsNull = new Service("test", ServicePerformer.NURSE, null);
         boolean test4Success = idIsNull.serviceInfoIsValid(idIsNull.getName(), idIsNull.getServicePerformer(), idIsNull.getId());
-        assertFalse("ServiceInfoIsValid did not recognize null service id.", test4Success);*/
+        assertFalse("ServiceInfoIsValid did not recognize null service id.", test4Success);
 
         // Test a service properly set up; in this case, seeks asserts for true
         Service properlySetService = new Service("test", ServicePerformer.STAFF, "9876");
