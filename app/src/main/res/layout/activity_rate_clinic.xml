@@ -41,7 +41,7 @@
                         android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/textView24"
+                        android:id="@+id/clinicName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:fontFamily="sans-serif-condensed"
@@ -98,6 +98,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-condensed"
+                android:onClick="cancelRating"
                 android:text="@string/btn_cancel" />
 
             <Button
@@ -107,6 +108,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-condensed"
+                android:onClick="createRating"
                 android:text="@string/btn_save_changes" />
 
         </LinearLayout>
