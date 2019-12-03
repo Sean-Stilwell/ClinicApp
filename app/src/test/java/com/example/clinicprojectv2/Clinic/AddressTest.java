@@ -83,7 +83,7 @@ public class AddressTest {
         assertEquals("Address' number could not be set manually successfully", 7, testAddress1.getNumber());
 
         // Testing change from 17 to 843
-        Address testAddress2 = new Address(CanadianProvince.ON, 17, "street", "ottawa");
+        Address testAddress2 = new Address(CanadianProvince.ON, 17, "Street", "Ottawa");
         testAddress2.setNumber(843);
         assertEquals("Address' number could not be set manually successfully", 843, testAddress2.getNumber());
     }
