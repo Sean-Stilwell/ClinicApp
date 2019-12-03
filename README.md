@@ -22,3 +22,11 @@ Ce répertoire contient nos fichiers pour le projet final de SEG2505 en automne,
 ![Modèle de domaine UML](domain-model.PNG)
 
 https://cruise.eecs.uottawa.ca/umpleonline/umple.php?model=191017190915983
+
+## Statut de construction
+
+[![Construire
+État]
+(https://circleci.com/gh/SEG2105-uottawa/seg2505-projet-equipe-a19-3.png?branch=master)]
+(https://circleci.com/gh/SEG2105-uottawa/seg2505-projet-equipe-a19-3/96)
+#Ends Here
