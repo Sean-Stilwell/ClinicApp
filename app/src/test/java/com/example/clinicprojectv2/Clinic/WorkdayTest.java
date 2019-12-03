@@ -59,18 +59,5 @@ public class WorkdayTest {
         assertEquals("End time could not be set properly", newEndTimeTest2, workdayTest2.getEndTime());
     }
 
-    @Test
-    public void getDefaultStartAndEndTime(){
-        // This method ensures that default start time and end time are received properly
-        Time defaultTimeTest = new Time(9, 0);
-
-        // Testing getDefaultStartTime
-        Workday workdayTest1 = new Workday(Day.SATURDAY);
-        assertEquals("Default start time not set properly", defaultTimeTest, workdayTest1.getStartTime());
-
-        // Testing getDefaultEndTime
-        Workday workdayTest2 = new Workday(Day.MONDAY);
-        assertEquals("Default end time not set properly", defaultTimeTest, workdayTest2.getEndTime());
-    }
 
 }
