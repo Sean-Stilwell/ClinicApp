@@ -35,10 +35,15 @@ public class AddressTest {
         assertTrue("isValidAddress did not recognize a valid address", testAddress1Success);
 
         // Testing a non-valid address
-        Address testAddress2 = new Address(CanadianProvince.ON, 7, "Street", "Ottawa");
-        testAddress2.setStreetName(null);
-        boolean testAddress2Success = testAddress2.isValidAddress(testAddress2.getProvince(), testAddress2.getNumber(), testAddress2.getStreetName(), testAddress2.getCity());
-        assertFalse("isValidAddress did not recognize a non-valid address", testAddress2Success);
+        try {
+            Address testAddress2 = new Address(CanadianProvince.ON, 7, "Street", "Ottawa");
+            testAddress2.setStreetName(null);
+            boolean testAddress2Success = testAddress2.isValidAddress(testAddress2.getProvince(), testAddress2.getNumber(), testAddress2.getStreetName(), testAddress2.getCity());
+            assertFalse("isValidAddress did not recognize a non-valid address", testAddress2Success);
+        } catch (Exception e) {
+            System.out.println("Non valid address exception caught");
+        }
+
     }
 
     @Test
