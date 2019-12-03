@@ -4,7 +4,7 @@ jobs:
     run: yes | sdkmanager --licenses || exit 0
     working_directory: ~/seg2505-projet-equipe-a19-3
     docker:
-      - image: circleci/android:api-28-alpha
+      - image: circleci/android:api-29
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
