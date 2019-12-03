@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class ServiceTest {
 
-    /**
+    /*
      * For the purpose of passing CircleCI tests, this block of tests has to be commented since android textUtils APIs
      * cannot be mocked by CircleCI.
      */
@@ -29,7 +29,7 @@ public class ServiceTest {
     } */
 
 
-    /**
+    /*
      * For the purpose of passing CircleCI tests, this block of tests has to be commented since android textUtils APIs
      * cannot be mocked by CircleCI.
      */
@@ -53,7 +53,7 @@ public class ServiceTest {
     } */
 
 
-    /**
+    /*
      * For the purpose of passing CircleCI tests, this block of tests has to be commented since android textUtils APIs
      * cannot be mocked by CircleCI.
      */
@@ -76,7 +76,7 @@ public class ServiceTest {
         assertEquals("Service performer not properly set.", ServicePerformer.STAFF, testService3.getServicePerformer());
     } */
 
-    /**
+    /*
      * For the purpose of passing CircleCI tests, this block of tests has to be commented since android textUtils APIs
      * cannot be mocked by CircleCI.
      */

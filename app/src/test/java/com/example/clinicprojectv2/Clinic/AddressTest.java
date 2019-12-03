@@ -13,11 +13,11 @@ public class AddressTest {
         // This method ensures that provinces are set properly in an address.
 
         // Testing an address in Ontario
-        Address testAddress = new Address(CanadianProvince.ON, 7, "street", "ottawa");
+        Address testAddress = new Address(CanadianProvince.ON, 7, "Street", "Ottawa");
         assertEquals("Province name not set properly", CanadianProvince.ON, testAddress.getProvince());
 
         // Testing an address in Québec
-        Address testAddress2 = new Address(CanadianProvince.QC, 7, "street", "ottawa");
+        Address testAddress2 = new Address(CanadianProvince.QC, 7, "Street", "Ottawa");
         assertEquals("Province name not set properly", CanadianProvince.QC, testAddress2.getProvince());
 
         // Testing a default address; should be Ontario
@@ -30,12 +30,12 @@ public class AddressTest {
         // This method ensures that the valid address test in the Address.java works properly
 
         // Testing a valid address
-        Address testAddress1 = new Address(CanadianProvince.ON, 7, "street", "ottawa");
+        Address testAddress1 = new Address(CanadianProvince.ON, 7, "Street", "Ottawa");
         boolean testAddress1Success = testAddress1.isValidAddress(testAddress1.getProvince(), testAddress1.getNumber(), testAddress1.getStreetName(), testAddress1.getCity());
         assertTrue("isValidAddress did not recognize a valid address", testAddress1Success);
 
         // Testing a non-valid address
-        Address testAddress2 = new Address(CanadianProvince.ON, 7, "street", "ottawa");
+        Address testAddress2 = new Address(CanadianProvince.ON, 7, "Street", "Ottawa");
         testAddress2.setStreetName(null);
         boolean testAddress2Success = testAddress2.isValidAddress(testAddress2.getProvince(), testAddress2.getNumber(), testAddress2.getStreetName(), testAddress2.getCity());
         assertFalse("isValidAddress did not recognize a non-valid address", testAddress2Success);
@@ -46,7 +46,7 @@ public class AddressTest {
         // This method ensures that address street names are set properly.
 
         // Testing first address
-        Address testAddress1 = new Address(CanadianProvince.ON, 7, "Street", "ottawa");
+        Address testAddress1 = new Address(CanadianProvince.ON, 7, "Street", "Ottawa");
         assertEquals("Street address not set properly", "Street", testAddress1.getStreetName());
 
         // Testing a default address
@@ -54,7 +54,7 @@ public class AddressTest {
         assertEquals("Street address not set properly", "Unamed", testAddress2.getStreetName());
 
         // Testing a second name address
-        Address testAddress3 = new Address(CanadianProvince.ON, 7, "Trial", "ottawa");
+        Address testAddress3 = new Address(CanadianProvince.ON, 7, "Trial", "Ottawa");
         assertEquals("Street address not set properly", "Trial", testAddress3.getStreetName());
     }
 
@@ -63,7 +63,7 @@ public class AddressTest {
         // This method ensures that an address' province can be manually set properly
 
         // Testing change from Québec to Ontario
-        Address testAddress1 = new Address(CanadianProvince.QC, 7, "street", "ottawa");
+        Address testAddress1 = new Address(CanadianProvince.QC, 7, "Street", "Ottawa");
         testAddress1.setProvince((CanadianProvince.ON));
         assertEquals("Address' Province could not be set properly", CanadianProvince.ON, testAddress1.getProvince());
 
