@@ -25,4 +25,4 @@ https://cruise.eecs.uottawa.ca/umpleonline/umple.php?model=191017190915983
 
 ## Statut de construction
 
-[![CircleCI](https://circleci.com/gh/SEG2105-uottawa/seg2505-projet-equipe-a19-3/tree/master.svg?style=svg)](https://circleci.com/gh/SEG2105-uottawa/seg2505-projet-equipe-a19-3/tree/master)
+[![État de construction](https://circleci.com/gh/SEG2105-uottawa/seg2505-projet-equipe-a19-3/tree/master.svg?style=svg&circle-token=ad953d71f4e007bd4717de8904303c83d1554763)](https://circleci.com/gh/SEG2105-uottawa/seg2505-projet-equipe-a19-3/tree/master)
