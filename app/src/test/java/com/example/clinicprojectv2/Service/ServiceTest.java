@@ -12,7 +12,7 @@ public class ServiceTest {
 
         // For a doctor
         Service testService = new Service("Doctor", ServicePerformer.DOCTOR, "9876");
-        assertEquals("Service name not properly set.", "doctor", testService.getName());
+        assertEquals("Service name not properly set.", "Doctor", testService.getName());
 
         // For a nurse
         Service testService2 = new Service("nurse", ServicePerformer.NURSE, "9876");
