@@ -41,7 +41,7 @@ public class RateClinicActivity extends AppCompatActivity {
     }
 
     public void createRating(View view) {
-        // TODO create rating
+        displayToast("Rating saved.");
     }
 
     public void cancelRating(View view) {

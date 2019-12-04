@@ -10,8 +10,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.clinicprojectv2.Booking.Booking;
-import com.example.clinicprojectv2.Booking.BookingList;
 import com.example.clinicprojectv2.Patient.RateClinicActivity;
 
 import java.util.List;
@@ -39,7 +37,7 @@ public class BookingsScreen extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView bookingItem = (TextView) parent.getAdapter().getItem(position);
                 Intent intent = new Intent(BookingsScreen.this, RateClinicActivity.class);
-                startActivity(intent);
+                BookingsScreen.this.startActivity(intent);
             }
         });
     }
