@@ -80,7 +80,7 @@ public class RateClinicActivity extends AppCompatActivity {
                     rating = dataSnapshot.getValue(ClinicRating.class);
                     onRatingFetchSuccess();
                 } else {
-                    displayToast("Failed to get ClinicRating object.");
+                    //displayToast("Failed to get ClinicRating object.");
                 }
             }
 

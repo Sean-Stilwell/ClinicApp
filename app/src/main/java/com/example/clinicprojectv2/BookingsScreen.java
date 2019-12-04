@@ -32,13 +32,18 @@ public class BookingsScreen extends AppCompatActivity {
 
         bookingList.setAdapter(arrayAdapter);
 
-        bookingList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        /*bookingList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 TextView bookingItem = (TextView) parent.getAdapter().getItem(position);
                 Intent intent = new Intent(BookingsScreen.this, RateClinicActivity.class);
                 BookingsScreen.this.startActivity(intent);
             }
-        });
+        });*/
+    }
+
+    public void rateClinic(View view) {
+        Intent intent = new Intent(BookingsScreen.this, RateClinicActivity.class);
+        BookingsScreen.this.startActivity(intent);
     }
 }
