@@ -1,7 +1,9 @@
 package com.example.clinicprojectv2.Booking;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.ListIterator;
 
 public class BookingList implements Serializable {
@@ -69,6 +71,19 @@ public class BookingList implements Serializable {
         }
         return returnString;
     }
+
+    public List<String> getBookingsAsStrings() {
+
+        List<String> list = new ArrayList<>();
+
+        for (Booking b : bookings) {
+            if (b != null) {
+                list.add(b.toString());
+            }
+        }
+        return list;
+    }
+
 
     /**
      * Method to determine the size of a bookings list.
