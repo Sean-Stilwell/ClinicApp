@@ -1,6 +1,6 @@
 # Clinic Application
 
-This repository contains all files for the final deliverable of the final project for SEG2505 (Intro to Software Engineering) in Fall 2020. 
+This repository contains all files for the final deliverable of the final project for SEG2505 (Intro to Software Engineering) in Fall 2019. 
 
 This Android application provides a variety of functionality for a fictional clinic. It is developed primarily in Java, and uses a Firebase database.
 
